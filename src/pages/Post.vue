@@ -6,7 +6,7 @@
                 <q-breadcrumbs-el :label="naskah.Kategori.Judul" />
                 <!-- <q-breadcrumbs-el class="ellipsis-2-lines" :label="naskah.Judul" /> -->
             </q-breadcrumbs>
-            <q-img :src="`https://people.xabi.us${naskah.Cover.url}`" :ratio="16/9" />
+            <q-img :src="`https://people.xabi.us${naskah.Cover.url}`" />
             <div class="text-right q-pr-sm text-grey-8">{{ naskah.Credit }}</div>
             <div class="ppl_post_content q-px-lg">
                 <h1 class="text-h5 text-bold ppl_post_title">{{ naskah.Judul }}</h1>
