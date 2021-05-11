@@ -1,0 +1,101 @@
+// app global css in SCSS form
+
+/* Breakpoints */
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $breakpoint-xs-min) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $breakpoint-sm-min) {
+  .container,
+  .container-sm,
+  .container-md {
+    max-width: 920px;
+  }
+}
+
+@media (min-width: $breakpoint-md-min) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: $breakpoint-lg-min) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1440px;
+  }
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body, p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Itim', cursive;
+}
+
+/* Home */
+
+a.ppl_home_router {
+  text-decoration: none;
+  color: $primary;
+}
+
+a.ppl_home_router:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.ppl_home_title {
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 28px;
+}
+
+@media (min-width: $breakpoint-md-min) {
+  .ppl_home > div {
+    padding: 30px;
+  }
+}
+
+/* Post */
+.ppl_post_title {
+  font-size: 40px;
+  line-height: 42px;
+}
+
+.ppl_post_meta {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.ppl_post_body {
+  font-size: 18px;
+}
+
+.ppl_post_player_close {
+  position: relative;
+  top:10px;
+  z-index: 999;
+  right:0;
+  float: right;
+}
