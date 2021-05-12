@@ -48,6 +48,7 @@
 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 body, p, h1, h2, h3, h4, h5, h6 {
   font-family: 'Itim', cursive;
@@ -88,9 +89,13 @@ a.ppl_home_router:hover {
   line-height: 30px;
 }
 
-.ppl_post_body {
-  font-size: 18px;
+
+.ppl_post_body p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
 }
+
 
 .ppl_post_player_close {
   position: relative;
