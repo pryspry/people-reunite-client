@@ -115,7 +115,8 @@ module.exports = function (/* ctx */) {
 
       // Quasar plugins
       plugins: [
-        'AddressbarColor'
+        'AddressbarColor',
+        'Meta'
       ]
     },
 
@@ -125,7 +126,7 @@ module.exports = function (/* ctx */) {
 
     // https://v1.quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
-      pwa: false
+      pwa: true
     },
 
     // https://v1.quasar.dev/quasar-cli/developing-pwa/configuring-pwa

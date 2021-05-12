@@ -1,13 +1,12 @@
 <template>
     <q-page>
         <div class="container" style="max-width:700px" v-for="naskah in naskahs" :key="naskah.slug">
-            <q-breadcrumbs gutter="sm" class="q-pa-md flex flex-center">
-                <q-breadcrumbs-el label="Home" to="/" />
-                <q-breadcrumbs-el :label="naskah.Kategori.Judul" />
-                <!-- <q-breadcrumbs-el class="ellipsis-2-lines" :label="naskah.Judul" /> -->
-            </q-breadcrumbs>
             <q-img :src="`https://people.xabi.us${naskah.Cover.url}`" :ratio="1" />
             <div class="text-right q-pr-sm text-grey-8">{{ naskah.Credit }}</div>
+            <q-breadcrumbs gutter="sm" class="q-pt-lg q-pl-lg">
+                <q-breadcrumbs-el label="Home" to="/" />
+                <q-breadcrumbs-el :label="naskah.Kategori.Judul" />
+            </q-breadcrumbs>
             <div class="ppl_post_content q-px-lg">
                 <h1 class="text-h5 text-bold ppl_post_title">{{ naskah.Judul }}</h1>
                 <div v-if="naskah.Player" class="ppl_post_attachment q-pb-lg text-right float-right">
@@ -45,6 +44,27 @@ import gql from 'graphql-tag'
 
 export default {
     // name: 'PageName',
+        meta: {
+        // sets document title
+        title: 'People Reunite',
+        // optional; sets final title as "Index Page - My Website", useful for multiple level meta
+        titleTemplate: title => `${title} - Official Site`,
+
+        // meta tags
+        meta: {
+            description: { name: 'description', content: 'People Reunite' },
+            keywords: { name: 'keywords', content: 'People Reunite' },
+            equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
+            // note: for Open Graph type metadata you will need to use SSR, to ensure page is rendered by the server
+            ogTitle: {
+                name: 'og:title',
+                // optional; similar to titleTemplate, but allows templating with other meta properties
+                template(ogTitle) {
+                    return `${ogTitle} - Official Site`
+                }
+            }
+        }
+    },
     data() {
         return {
             seamless: false
