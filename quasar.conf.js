@@ -8,6 +8,8 @@
 
 module.exports = function (/* ctx */) {
   return {
+    preFetch: true,
+
     // https://v1.quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
 
@@ -18,7 +20,7 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://v1.quasar.dev/quasar-cli/boot-files
     boot: [
-      
+      'addressbar-color',
       'axios',
     ],
 
