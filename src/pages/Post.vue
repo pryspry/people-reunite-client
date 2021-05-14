@@ -25,12 +25,12 @@
                 </div>
             </div>
             <div class="ppl_post_player">
-                <q-dialog v-model="seamless" seamless position="bottom">
+                <q-dialog v-model="seamless" seamless position="top">
                     <q-card style="width: 550px;" class="bg-transparent" flat>
                         <q-card-section class="q-pa-none">
-                            <q-btn class="bg-black text-white ppl_post_player_close" icon="close" v-close-popup/>
-                            <q-markdown>{{ naskah.Player}}</q-markdown>
                             <q-linear-progress dark indeterminate color="red" />
+                            <q-markdown>{{ naskah.Player}}</q-markdown>
+                            <q-btn class="bg-black text-white ppl_post_player_close" icon="close" v-close-popup/>
                         </q-card-section>
                     </q-card>
                 </q-dialog>
@@ -43,11 +43,19 @@
 import gql from 'graphql-tag'
 
 export default {
-    // name: 'PageName',
+    name: 'PostPage',
+
+    meta() {
+        return {
+            title: this.title
+        }
+    },
+
 
     data() {
         return {
-            seamless: false
+            seamless: false,
+            title: 'People Reunite Post'
         }
     },
     apollo: {

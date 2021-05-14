@@ -7,6 +7,10 @@
 
 <script>
 export default {
-  // name: 'PageName',
+  name: 'SubmitPage',
+    meta: {
+        title: 'Submit People Reunite'
+    },
+
 }
 </script>

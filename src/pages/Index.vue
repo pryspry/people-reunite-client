@@ -17,66 +17,24 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
+// import gql from 'graphql-tag'
+import { allNaskahsQuery } from 'src/graphql/queries.js'
 
 export default {
     name: 'PageIndex',
     meta: {
-        // sets document title
-        title: 'People Reunite',
-        // optional; sets final title as "Index Page - My Website", useful for multiple level meta
-        titleTemplate: title => `${title} - Official Site`,
-
-        // meta tags
-        meta: {
-            description: { name: 'description', content: 'People Reunite' },
-            keywords: { name: 'keywords', content: 'People Reunite' },
-            equiv: { 'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8' },
-            // note: for Open Graph type metadata you will need to use SSR, to ensure page is rendered by the server
-            ogTitle: {
-                name: 'og:title',
-                // optional; similar to titleTemplate, but allows templating with other meta properties
-                template(ogTitle) {
-                    return `${ogTitle} - Official Site`
-                }
-            }
-        }
+        title: 'People Reunite Official Site'
     },
     data() {
         return {
             naskahs: [],
         }
-    },
+    }, 
     apollo: {
         naskahs: {
-            query: gql `
-            query{
-              naskahs(sort: "Published:desc"){
-                Judul
-                Subjudul
-                slug
-                Cover{
-                  url
-                  caption
-                  alternativeText
-                }
-                Body
-                MetaDescription
-                Keywords
-                Kanal
-                KanalUrl
-                Kategori{
-                  Judul 
-                }
-                kontributors{
-                  Nama
-                }
-                Player
-                Published
+            prefetch: true,
+            query: allNaskahsQuery
 
-              }
-            }           
-          `
         }
     }
 }

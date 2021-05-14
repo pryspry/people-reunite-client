@@ -8,7 +8,11 @@
 
 <script>
 export default {
-  // name: 'PageName',
+  name: 'AboutPage',
+    meta: {
+        title: 'About People Reunite'
+    },
+
 }
 </script>
 
