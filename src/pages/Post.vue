@@ -45,7 +45,7 @@
                     <q-card-section class="row items-center q-pt-lg q-px-lg">
                         <!-- <q-avatar icon="fa fa-retweet" color="primary" text-color="white" /> -->
                         <span class="q-ml-none q-pb-sm">Artikel ini pernah diterbitkan di <span class="text-bold">{{ naskahs[0].Kanal }}</span> </span>
-                        <span>URL: {{ naskahs[0].KanalUrl }}</span>
+                        <span style="word-break: break-all;">URL: {{ naskahs[0].KanalUrl }}</span>
                     </q-card-section>
                     <q-card-actions align="right" class="q-pr-md q-pb-md">
                         <!-- <q-btn label="Lihat Sumber" color="primary" class="text-capitalize" tag="a" target="_blank" :href="naskahs[0].KanalUrl"/> -->
