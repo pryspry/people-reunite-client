@@ -1,5 +1,5 @@
 <template>
-    <q-footer bordered class="bg-primary text-white">
+    <q-footer reveal bordered class="bg-primary text-white">
         <div class="q-gutter-y-md">
             <q-tabs class="text-white">
                 <q-route-tab exact class="text-lowercase" to="/" icon="fa fa-angle-double-left" label="Home" />
