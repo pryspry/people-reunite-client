@@ -8,17 +8,21 @@
                 <q-breadcrumbs-el :label="naskahs[0].Kategori.Judul" />
             </q-breadcrumbs>
             <div class="ppl_post_content q-px-lg">
-                <h1 class="text-h5 text-bold ppl_post_title">{{ naskahs[0].Judul }}</h1>
+                <h5 class="q-mb-none text-italic text-uppercase q-mt-lg">{{ naskahs[0].Subjudul }}</h5>
+                <h1 class="text-h5 q-mt-none text-bold ppl_post_title">{{ naskahs[0].Judul }}</h1>
                 <div v-if="naskahs[0].Player" class="ppl_post_attachment q-pb-lg text-right float-right">
                     <q-btn flat class="text-lowercase" stack @click="seamless = true">
                         <q-icon name="fa fa-play" />Play </q-btn>
                 </div>
-                <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br>on {{ naskahs[0].Published }}<span v-if="naskahs[0].KanalUrl" style="font-size: 18px;"><br>via <a style="text-decoration:underline;color:black;" :href="naskahs[0].KanalUrl" target="_blank">{{ naskahs[0].Kanal}}</a></span></div>
+                <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br>on {{ naskahs[0].Published }}
+                    <div v-if="naskahs[0].Kanal" style="font-size: 18px;" class="q-pt-sm">via <q-btn flat style="font-size: 16px;top:-1px" class="text-capitalize ppl_kanal" :label="naskahs[0].Kanal" color="black" @click="confirm = true" />
+                    </div>
+                </div>
                 <div class="ppl_post_body q-mb-xl q-pb-md">
                     <q-markdown>{{ naskahs[0].Body }}</q-markdown>
                 </div>
             </div>
-            <div v-if="`naskahs[0].Player`" style="height:250px">
+            <div v-if="`naskahs[0].Player`" style="height:150px">
                 <div class="text-center">
                     <q-btn flat class="text-lowercase" stack @click="seamless = true">
                         <q-icon name="fa fa-play" />Play Attachment</q-btn>
@@ -35,6 +39,22 @@
                     </q-card>
                 </q-dialog>
             </div>
+    
+            <q-dialog v-model="confirm">
+                <q-card>
+                    <q-card-section class="row items-center q-pt-lg q-px-lg">
+                        <!-- <q-avatar icon="fa fa-retweet" color="primary" text-color="white" /> -->
+                        <span class="q-ml-none q-pb-sm">Artikel ini pernah diterbitkan di <span class="text-bold">{{ naskahs[0].Kanal }}</span> </span>
+                        <span>URL: {{ naskahs[0].KanalUrl }}</span>
+                    </q-card-section>
+                    <q-card-actions align="right" class="q-pr-md q-pb-md">
+                        <!-- <q-btn label="Lihat Sumber" color="primary" class="text-capitalize" tag="a" target="_blank" :href="naskahs[0].KanalUrl"/> -->
+                        <q-btn label="Lanjutkan Baca" color="primary" v-close-popup />
+                    </q-card-actions>
+                </q-card>
+            </q-dialog>
+    
+    
         </div>
     </q-page>
 </template>
@@ -55,7 +75,8 @@ export default {
     data() {
         return {
             seamless: false,
-            title: 'People Reunite Post'
+            title: 'People Reunite Post',
+            confirm: false,
         }
     },
     apollo: {
@@ -65,6 +86,7 @@ export default {
           naskahs(where: {slug: $slug}) {
             id
             Judul
+            Subjudul
             slug
             Cover {
               url
@@ -93,3 +115,9 @@ export default {
     },
 }
 </script>
+
+<style>
+.ppl_kanal .col {
+    padding: 0px !important;
+}
+</style>
