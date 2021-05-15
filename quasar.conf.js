@@ -8,13 +8,12 @@
 
 module.exports = function (/* ctx */) {
   return {
-    preFetch: true,
 
     // https://v1.quasar.dev/quasar-cli/supporting-ts
     supportTS: false,
 
     // https://v1.quasar.dev/quasar-cli/prefetch-feature
-    // preFetch: true,
+    preFetch: true,
 
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"

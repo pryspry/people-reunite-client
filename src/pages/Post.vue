@@ -37,7 +37,7 @@
                     <img :src="`https://people.xabi.us${naskahs[0].Avatar.url}`">
                 </q-avatar> -->
                 <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br>on {{ naskahs[0].Published }}
-                    <div v-if="naskahs[0].Kanal" style="font-size: 18px;" class="q-pt-sm">via <q-btn flat style="font-size: 16px;top:-1px" class="text-capitalize ppl_kanal" :label="naskahs[0].Kanal" color="black" @click="confirm = true" />
+                    <div v-if="naskahs[0].Kanal" style="font-size: 18px;" class="q-pt-sm"><q-icon style="font-size:10px" name="fas fa-external-link-alt" /> via <q-btn flat style="font-size: 16px;top:-1px" class="text-capitalize ppl_kanal" :label="naskahs[0].Kanal" color="black" @click="confirm = true" />
                     </div>
                 </div>
                 <div class="ppl_post_body q-mb-xl q-pb-md">
@@ -67,7 +67,7 @@
                     <q-card-section class="row items-center q-pt-lg q-px-lg">
                         <!-- <q-avatar icon="fa fa-retweet" color="primary" text-color="white" /> -->
                         <span class="q-ml-none q-pb-sm">Artikel ini pernah diterbitkan di <span class="text-bold">{{ naskahs[0].Kanal }}</span> </span>
-                        <span style="word-break: break-all;">URL: {{ naskahs[0].KanalUrl }}</span>
+                        <span style="word-break: break-all;">{{ naskahs[0].KanalUrl }}</span>
                     </q-card-section>
                     <q-card-actions align="right" class="q-pr-md q-pb-md">
                         <!-- <q-btn label="Lihat Sumber" color="primary" class="text-capitalize" tag="a" target="_blank" :href="naskahs[0].KanalUrl"/> -->

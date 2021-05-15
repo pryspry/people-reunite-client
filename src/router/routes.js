@@ -8,6 +8,15 @@ const routes = [
       { path: 'info', component: () => import('pages/Info.vue') },
       { path: 'submit', component: () => import('pages/Submit.vue') },
       { path: '/post/:slug', component: () => import('pages/Post.vue') },
+      { path: 'news', component: () => import('pages/News.vue') },
+      { path: 'review', component: () => import('pages/Review.vue') },
+      { path: 'essay', component: () => import('pages/Essay.vue') },
+      { path: 'kontributor', component: () => import('pages/Kontributor.vue') },
+      { path: 'kirim-naskah', component: () => import('pages/KirimNaskah.vue') },
+      { path: 'ketentuan-layanan', component: () => import('pages/KetentuanLayanan.vue') },
+      { path: 'lisensi', component: () => import('pages/Lisensi.vue') },
+      { path: 'kategori', component: () => import('pages/Kategori.vue') },
+      { path: 'trending', component: () => import('pages/Trending.vue') },            
     ]
   },
 

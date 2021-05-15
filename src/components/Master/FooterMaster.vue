@@ -1,11 +1,108 @@
 <template>
+<div>
     <q-footer reveal bordered class="bg-primary text-white">
         <div class="q-gutter-y-md">
             <q-tabs class="text-white">
-                <q-route-tab exact class="text-lowercase" to="/" icon="fa fa-angle-double-left" label="Home" />
-                <q-route-tab exact class="text-lowercase" to="/info" icon="fa fa-podcast" label="About" />
-                <q-route-tab exact class="text-lowercase" to="/submit" icon="fa fa-comments" label="Submit" />
+                <q-route-tab exact class="text-lowercase" to="/" icon="fas fa-podcast" label="Index" />
+                <q-route-tab exact class="text-lowercase" to="/kategori" icon="fa fa-book-reader" label="Kategori" />
+                <q-route-tab exact class="text-lowercase" to="/trending" icon="fab fa-hotjar" label="Trending" />
+                <q-tab @click="drawer = !drawer" icon="fas fa-grip-horizontal" />
             </q-tabs>
         </div>
     </q-footer>
+
+      <q-drawer
+        v-model="drawer"
+        :breakpoint="500"
+        overlay
+        bordered
+        content-class="bg-grey-3"
+
+      >
+        <q-scroll-area class="fit">
+          <q-list>
+
+            <template v-for="(menuItem, index) in menuList">
+              <q-item :key="index" :to="menuItem.to" clickable :active="menuItem.label === 'Outbox'" v-ripple>
+                <q-item-section avatar>
+                  <q-icon :name="menuItem.icon" />
+                </q-item-section>
+                <q-item-section>
+                  {{ menuItem.label }}
+                </q-item-section>
+              </q-item>
+              <q-separator :key="'sep' + index" v-if="menuItem.separator" />
+            </template>
+
+          </q-list>
+        </q-scroll-area>
+      </q-drawer>
+</div>
 </template>
+
+<script>
+const menuList = [
+  {
+    icon: 'fab fa-houzz',
+    label: 'Beranda',
+    to: '/',
+    separator: false
+  },
+  {
+    icon: 'fas fa-moon',
+    label: 'Dark Mode',
+    separator: true
+  },
+  {
+    icon: 'fas fa-bolt',
+    label: 'News',
+    to: '/news',    
+    separator: false
+  },
+  {
+    icon: 'fas fa-file-medical-alt',
+    label: 'Review',
+    to: '/review',
+    separator: false
+  },
+  {
+    icon: 'fas fa-coffee',
+    label: 'Essay',
+    to: '/essay',
+    separator: true
+  },
+  {
+    icon: 'fa fa-users',
+    label: 'Kontributor',
+    to: '/kontributor',    
+    separator: false
+  },
+  {
+    icon: 'comment',
+    label: 'Kirim Naskah',
+    to: '/kirim-naskah',    
+    separator: false
+  },
+  {
+    icon: 'info',
+    label: 'Ketentuan Layanan',
+    to: '/ketentuan-layanan',    
+    separator: false
+  },
+  {
+    icon: 'fab fa-creative-commons',
+    label: 'Lisensi',
+    to: '/lisensi',    
+    separator: false
+  }          
+]
+
+export default {
+  data () {
+    return {
+      drawer: true,
+      menuList
+    }
+  }
+}
+</script>
