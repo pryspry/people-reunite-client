@@ -8,9 +8,9 @@
 
 <script>
 export default {
-  name: 'AboutPage',
+  name: 'LisensiPage',
     meta: {
-        title: 'About People Reunite'
+        title: 'Lisensi - People Reunite'
     },
 
 }

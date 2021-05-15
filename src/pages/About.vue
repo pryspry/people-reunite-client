@@ -8,9 +8,9 @@
 
 <script>
 export default {
-  name: 'KirimNaskahPage',
+  name: 'AboutPage',
     meta: {
-        title: 'Kirim Naskah - People Reunite'
+        title: 'About - People Reunite'
     },
 
 }

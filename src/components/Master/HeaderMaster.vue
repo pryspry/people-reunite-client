@@ -1,20 +1,42 @@
 <template>
-        <q-header elevated class="bg-primary text-white">
-          <div class="row justify-center container">
-            <q-toolbar class="col text-center">
+    <q-header elevated class="bg-primary text-white">
+        <div class="row container">
+            <q-toolbar class="col">
                 <q-toolbar-title>
                     <q-btn flat to="/" class="text-lowercase">
-                        <h1 class="text-h6"><q-icon name="fas fa-podcast"/><span class="q-pl-sm">peoplereunite</span></h1>
+                        <h1 class="text-h6">
+                            <q-icon name="fas fa-podcast" /><span class="q-pl-sm">peoplereunite</span></h1>
                     </q-btn>
+                    <q-toggle class="ppl_darkmode" style="width: 60px" v-model="dark" @input="changeDarkMode" color="grey"></q-toggle>
+    
                 </q-toolbar-title>
             </q-toolbar>
-          </div>
-        </q-header>
-
+        </div>
+    </q-header>
 </template>
 
 <script>
 export default {
+    created() {
+        this.dark = this.$q.dark.isActive;
+    },
+    watch: {
+        '$q.dark.isActive' (val) {
+            this.dark = val;
+        }
+    },
+
+    data() {
+        return {
+            dark: false
+        }
+    },
+    methods: {
+        changeDarkMode(value) {
+            this.dark = value;
+            this.$q.dark.set(value);
+        }
+    }
 
 }
 </script>

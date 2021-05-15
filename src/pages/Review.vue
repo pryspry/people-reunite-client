@@ -36,9 +36,9 @@
 import { reviewNaskahsQuery } from 'src/graphql/queries.js'
 
 export default {
-    name: 'PageIndex',
+    name: 'ReviewPage',
     meta: {
-        title: 'People Reunite Official Site'
+        title: 'Review - People Reunite'
     },
     data() {
         return {

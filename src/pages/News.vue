@@ -36,9 +36,9 @@
 import { newsNaskahsQuery } from 'src/graphql/queries.js'
 
 export default {
-    name: 'PageIndex',
+    name: 'NewsPage',
     meta: {
-        title: 'People Reunite Official Site'
+        title: 'News - People Reunite'
     },
     data() {
         return {

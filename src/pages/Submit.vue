@@ -10,7 +10,7 @@
 export default {
   name: 'SubmitPage',
     meta: {
-        title: 'Submit People Reunite'
+        title: 'Submit - People Reunite'
     },
 
 }

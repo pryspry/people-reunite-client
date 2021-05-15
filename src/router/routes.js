@@ -5,7 +5,7 @@ const routes = [
     component: () => import('layouts/Master.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') },
-      { path: 'info', component: () => import('pages/Info.vue') },
+      { path: 'about', component: () => import('pages/About.vue') },
       { path: 'submit', component: () => import('pages/Submit.vue') },
       { path: '/post/:slug', component: () => import('pages/Post.vue') },
       { path: 'news', component: () => import('pages/News.vue') },

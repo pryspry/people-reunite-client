@@ -8,9 +8,9 @@
 
 <script>
 export default {
-  name: 'AboutPage',
+  name: 'KontributorPage',
     meta: {
-        title: 'About People Reunite'
+        title: 'Kontributor - People Reunite'
     },
 
 }

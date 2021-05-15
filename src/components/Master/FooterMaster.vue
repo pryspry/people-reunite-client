@@ -4,9 +4,9 @@
         <div class="q-gutter-y-md">
             <q-tabs class="text-white">
                 <q-route-tab exact class="text-lowercase" to="/" icon="fas fa-podcast" label="Index" />
-                <q-route-tab exact class="text-lowercase" to="/kategori" icon="fa fa-book-reader" label="Kategori" />
-                <q-route-tab exact class="text-lowercase" to="/trending" icon="fab fa-hotjar" label="Trending" />
-                <q-tab @click="drawer = !drawer" icon="fas fa-grip-horizontal" />
+                <q-route-tab exact class="text-lowercase" to="/about" icon="fa fa-book-reader" label="About" />
+                <!-- <q-route-tab exact class="text-lowercase" to="/trending" icon="fab fa-hotjar" label="Trending" /> -->
+                <q-tab class="text-lowercase" @click="drawer = !drawer" icon="fas fa-grip-horizontal" label="More"/>
             </q-tabs>
         </div>
     </q-footer>
@@ -16,7 +16,6 @@
         :breakpoint="500"
         overlay
         bordered
-        content-class="bg-grey-3"
 
       >
         <q-scroll-area class="fit">
@@ -48,11 +47,11 @@ const menuList = [
     to: '/',
     separator: false
   },
-  {
-    icon: 'fas fa-moon',
-    label: 'Dark Mode',
-    separator: true
-  },
+  // {
+  //   icon: 'fas fa-moon',
+  //   label: 'Dark Mode',
+  //   separator: true
+  // },
   {
     icon: 'fas fa-bolt',
     label: 'News',
@@ -71,18 +70,18 @@ const menuList = [
     to: '/essay',
     separator: true
   },
-  {
-    icon: 'fa fa-users',
-    label: 'Kontributor',
-    to: '/kontributor',    
-    separator: false
-  },
-  {
-    icon: 'comment',
-    label: 'Kirim Naskah',
-    to: '/kirim-naskah',    
-    separator: false
-  },
+  // {
+  //   icon: 'fa fa-users',
+  //   label: 'Kontributor',
+  //   to: '/kontributor',    
+  //   separator: false
+  // },
+  // {
+  //   icon: 'comment',
+  //   label: 'Kirim Naskah',
+  //   to: '/kirim-naskah',    
+  //   separator: false
+  // },
   {
     icon: 'info',
     label: 'Ketentuan Layanan',
@@ -100,7 +99,7 @@ const menuList = [
 export default {
   data () {
     return {
-      drawer: true,
+      drawer: false,
       menuList
     }
   }
