@@ -1,7 +1,8 @@
 <template>
   <q-page padding class="flex flex-center">
     <!-- content -->
-    <div>Coming Soon</div>
+    <div class="logo"><q-icon name="fas fa-podcast"/></div>
+    <div class="q-pl-md">Coming Soon</div>
   </q-page>
 </template>
 
