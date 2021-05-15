@@ -111,3 +111,16 @@ a.ppl_home_router:hover {
   float: right;
   top: 14px;  
 }
+
+.body--dark p,
+.body--dark a,
+.body--dark h1,
+.body--dark h2,
+.body--dark h3,
+.body--dark .q-breadcrumbs__el,
+.body--dark .q-breadcrumbs__separator,
+.body--dark .q-link
+{
+  color: #ddd;
+}
+

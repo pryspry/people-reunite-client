@@ -21,7 +21,9 @@
         <div class="container" style="max-width:700px" v-if="naskahs">
             <q-img :src="`https://people.xabi.us${naskahs[0].Cover.url}`" style="width: 100%" />
             <div class="text-right q-pr-sm text-grey-8">{{ naskahs[0].Credit }}</div>
-            <q-breadcrumbs gutter="sm" class="q-pt-lg q-pl-lg">
+            <q-breadcrumbs gutter="sm" 
+            class="q-pt-lg q-pl-lg"
+            >
                 <q-breadcrumbs-el label="Home" to="/" />
                 <q-breadcrumbs-el :label="naskahs[0].Kategori.Judul" />
             </q-breadcrumbs>
@@ -44,12 +46,6 @@
                     <q-markdown>{{ naskahs[0].Body }}</q-markdown>
                 </div>
             </div>
-            <div v-if="`naskahs[0].Player`" style="height:150px">
-                <div class="text-center">
-                    <q-btn flat class="text-lowercase" stack @click="seamless = true">
-                        <q-icon name="fa fa-play" />Play Attachment</q-btn>
-                </div>
-            </div>
             <div class="ppl_post_player">
                 <q-dialog v-model="seamless" seamless position="top">
                     <q-card style="width: 550px;" class="bg-transparent" flat>
@@ -65,12 +61,10 @@
             <q-dialog v-model="confirm">
                 <q-card>
                     <q-card-section class="row items-center q-pt-lg q-px-lg">
-                        <!-- <q-avatar icon="fa fa-retweet" color="primary" text-color="white" /> -->
                         <span class="q-ml-none q-pb-sm">Artikel ini pernah diterbitkan di <span class="text-bold">{{ naskahs[0].Kanal }}</span> </span>
                         <span style="word-break: break-all;">{{ naskahs[0].KanalUrl }}</span>
                     </q-card-section>
                     <q-card-actions align="right" class="q-pr-md q-pb-md">
-                        <!-- <q-btn label="Lihat Sumber" color="primary" class="text-capitalize" tag="a" target="_blank" :href="naskahs[0].KanalUrl"/> -->
                         <q-btn label="Lanjutkan Baca" color="primary" v-close-popup />
                     </q-card-actions>
                 </q-card>
