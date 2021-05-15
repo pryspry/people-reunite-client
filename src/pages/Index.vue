@@ -1,6 +1,21 @@
 <template>
     <q-page class="q-pa-md">
         <div class="row container ppl_home">
+            <div style="width:700px" v-if="!naskahs">
+            <q-card flat v-for="naskah in naskahs" :key="naskah.id">
+                <q-skeleton height="300px" square />
+                <q-item>
+                    <q-item-section>
+                        <q-item-label>
+                            <q-skeleton type="text" />
+                        </q-item-label>
+                        <q-item-label caption>
+                            <q-skeleton type="text" />
+                        </q-item-label>
+                    </q-item-section>
+                </q-item>
+            </q-card>
+            </div>
             <div class="col-12 col-md-4" v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">
                     <q-card flat style="height: 350px" class="q-my-md">
