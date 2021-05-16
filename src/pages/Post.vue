@@ -97,10 +97,10 @@ export default {
             meta: {
                 description: { name: 'description', content: this.metaDesc },
                 keywords: { name: 'keywords', content: this.metaKeywords },
-                ogTitle: {name: 'og:title', content: this.metaTitle},
-                ogDescription: {name: 'og:description', content: this.metaDesc},
-                ogImage: {name: 'og:image', content: this.metaImage},                
-                ogUrl: {name: 'og:url', content: this.metaUrl}
+                ogTitle: {property: 'og:title', content: this.metaTitle},
+                ogDescription: {property: 'og:description', content: this.metaDesc},
+                ogImage: {property: 'og:image', content: this.metaImage},                
+                ogUrl: {property: 'og:url', content: this.metaUrl}
             },
         }
     },
