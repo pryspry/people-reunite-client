@@ -93,13 +93,33 @@ export default {
 
     meta() {
         return {
-            title: this.title
+            title: this.metaTitle,
+            meta: {
+                description: { name: 'description', content: this.metaDesc },
+                keywords: { name: 'keywords', content: this.metaKeywords },
+                ogTitle: {name: 'og:title', content: this.metaTitle},
+                ogDescription: {name: 'og:description', content: this.metaDesc},
+                ogImage: {name: 'og:image', content: this.metaImage},                
+                ogUrl: {name: 'og:url', content: this.metaUrl}
+            },
         }
     },
     computed: {
-        judulPost: function() {
+        metaTitle() {
             return this.naskahs[0].Judul
-        }
+        },
+        metaDesc() {
+            return this.naskahs[0].MetaDescription
+        },
+        metaKeywords() {
+            return this.naskahs[0].Keywords
+        },
+        metaUrl() {
+            return `https://peoplereunite.us/post/`+this.naskahs[0].slug
+        },
+        metaImage() {
+            return `https://people.xabi.us`+this.naskahs[0].Cover.url
+        }                        
     },
     data() {
         return {
@@ -133,7 +153,8 @@ export default {
             KanalUrl
             Credit
             Player
-
+            MetaDescription
+            Keywords
           }
         }      
       `,
