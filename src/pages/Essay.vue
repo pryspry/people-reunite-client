@@ -1,5 +1,9 @@
 <template>
     <q-page class="q-pa-md">
+        <h1 class="ppl_kategorititle text-h5">
+            <q-icon name="fas fa-coffee"/> Essay
+        </h1>
+
         <div class="row container ppl_home">
             <div style="width:700px" v-if="!naskahs">
             <q-card flat v-for="naskah in naskahs" :key="naskah.id">

@@ -1,20 +1,23 @@
 <template>
     <q-page class="q-pa-md">
+        <h1 class="ppl_kategorititle text-h5">
+            <q-icon name="fas fa-bolt"/> News
+        </h1>
         <div class="row container ppl_home">
             <div style="width:700px" v-if="!naskahs">
-            <q-card flat v-for="naskah in naskahs" :key="naskah.id">
-                <q-skeleton height="300px" square />
-                <q-item>
-                    <q-item-section>
-                        <q-item-label>
-                            <q-skeleton type="text" />
-                        </q-item-label>
-                        <q-item-label caption>
-                            <q-skeleton type="text" />
-                        </q-item-label>
-                    </q-item-section>
-                </q-item>
-            </q-card>
+                <q-card flat v-for="naskah in naskahs" :key="naskah.id">
+                    <q-skeleton height="300px" square />
+                    <q-item>
+                        <q-item-section>
+                            <q-item-label>
+                                <q-skeleton type="text" />
+                            </q-item-label>
+                            <q-item-label caption>
+                                <q-skeleton type="text" />
+                            </q-item-label>
+                        </q-item-section>
+                    </q-item>
+                </q-card>
             </div>
             <div class="col-12 col-md-4" v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">
@@ -44,7 +47,7 @@ export default {
         return {
             naskahs: [],
         }
-    }, 
+    },
     apollo: {
         naskahs: {
             prefetch: true,
@@ -56,6 +59,6 @@ export default {
         tanggalPublikasi: function(value) {
             return date.formatDate(value, 'D MMM YYYY');
         }
-    }    
+    }
 }
 </script>

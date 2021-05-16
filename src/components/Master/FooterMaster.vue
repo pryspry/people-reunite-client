@@ -3,10 +3,10 @@
     <q-footer reveal bordered class="bg-primary text-white">
         <div class="q-gutter-y-md">
             <q-tabs class="text-white">
-                <q-route-tab exact class="text-lowercase" to="/" icon="fas fa-home" />
-                <q-route-tab exact class="text-lowercase" to="/about" icon="fa fa-podcast"/>
-                <q-route-tab exact class="text-lowercase" to="/subscribe" icon="fa fa-envelope" />
-                <q-tab @click="drawer = !drawer" icon="fas fa-ellipsis-v" />
+                <q-route-tab exact class="text-lowercase" label="Home" to="/" icon="fas fa-home" />
+                <q-route-tab exact class="text-lowercase" label="About" to="/about" icon="fa fa-podcast"/>
+                <q-route-tab exact class="text-lowercase" label="Inbox" to="/subscribe" icon="fa fa-envelope" />
+                <q-tab exact @click="drawer = !drawer" class="text-lowercase" label="More" icon="fas fa-ellipsis-v" />
             </q-tabs>
         </div>
     </q-footer>

@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="q-pl-md">
+    <div class="q-px-md">
       <h1 class="text-h5">About</h1>
       <p>peoplereunite adalah media sindikasi dan jejaring digital yang memuat info seputar musik, sastra dan seni budaya di Indonesia.</p>
       <p>Digagas pertama kali pada 2017 sebagai hashtag campaign di sosial media, peoplereunite berkembang menjadi wadah berkarya sejumlah penulis, musisi dan pelaku seni di masa pandemi 2019 - 2020.</p>  
@@ -15,15 +15,17 @@
       <p>Kirimkan naskah via WhatsApp di 08881536856 atau email ke info@peoplereunite.us. Untuk saat ini kami tidak menyediakan honorarium bagi naskah yang dimuat.</p>
       <h1 class="text-h5">Kontak Kami</h1>
       <p>Untuk keperluan korespondensi, donasi, kerjasama dan lain-lain, sila hubungi kami via WhatsApp di 08881536856 atau email di info@peoplereunite.us</p>
+      <h1 class="text-h5">Alamat Surat</h1>
+      <p>Jl Kalibata Utara II No 14B, Mampang Prapatan, Kota Jakarta Selatan, DKI Jakarta, 12470</p>
       </div>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: 'SubscribePage',
+  name: 'AboutPage',
     meta: {
-        title: 'Subscribe - People Reunite'
+        title: 'About - People Reunite'
     },
 
 }
