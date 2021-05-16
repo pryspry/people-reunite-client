@@ -30,12 +30,8 @@
                 <h1 class="text-h5 q-mt-none text-bold ppl_post_title">{{ naskahs[0].Judul }}</h1>
                 <div v-if="naskahs[0].Player" class="ppl_post_attachment q-pb-lg text-right float-right">
                     <q-btn flat class="text-lowercase" stack @click="seamless = true">
-                        <q-icon name="fa fa-play" />Play </q-btn>
+                        <q-icon name="fa fa-play text-red" />Play </q-btn>
                 </div>
-                <!-- {{ naskahs[0].kontributors[0].Avatar }}
-                        <q-avatar class="float-left q-mr-sm" style="width:40px;height:40px;">
-                            <img :src="`https://people.xabi.us${naskahs[0].Avatar.url}`">
-                        </q-avatar> -->
                 <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br>on {{ naskahs[0].Published | tanggalPublikasi }}
                     <div v-if="naskahs[0].Kanal" style="font-size: 18px;" class="q-pt-sm">
                         <q-icon style="font-size:10px" name="fas fa-external-link-alt" /> via
@@ -44,6 +40,18 @@
                 </div>
                 <div class="ppl_post_body q-mb-xl q-pb-md">
                     <q-markdown>{{ naskahs[0].Body }}</q-markdown>
+                    <div class="ppl_share flex flex-center q-pt-lg">
+                        <div class="float-left q-pr-sm">Share on</div>
+                        <ShareNetwork network="twitter" :url="`https://peoplereunite.us/post/` + naskahs[0].slug" :title="naskahs[0].Judul" hashtags="peoplereunite">
+                            <i class="fab fah fa-lg fa-twitter text-black"></i>
+                        </ShareNetwork>
+                        <ShareNetwork network="facebook" :url="`https://peoplereunite.us/post/` + naskahs[0].slug" :title="naskahs[0].Judul" hashtags="peoplereunite">
+                            <i class="fab fah fa-lg fa-facebook text-black q-px-sm"></i>
+                        </ShareNetwork>
+                        <ShareNetwork network="telegram" :url="`https://peoplereunite.us/post/` + naskahs[0].slug" :title="naskahs[0].Judul" hashtags="peoplereunite">
+                            <i class="fab fah fa-lg fa-telegram text-black"></i>
+                        </ShareNetwork>
+                    </div>
                 </div>
             </div>
             <div class="ppl_post_player">
@@ -98,7 +106,7 @@ export default {
             seamless: false,
             title: 'People Reunite Post',
             confirm: false,
-            tanggalPublikasi: ''
+            tanggalPublikasi: '',
         }
     },
     apollo: {

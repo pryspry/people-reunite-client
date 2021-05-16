@@ -3,7 +3,7 @@
         <q-footer reveal bordered class="bg-primary text-white">
             <div class="q-gutter-y-md">
                 <q-tabs class="text-white">
-                    <q-route-tab exact class="text-lowercase" label="Home" to="/" icon="fas fa-home" />
+                    <q-route-tab exact class="text-lowercase" label="Home" to="/" icon="fab fa-houzz" />
                     <q-route-tab exact class="text-lowercase" label="About" to="/about" icon="fa fa-podcast" />
                     <q-route-tab exact class="text-lowercase" label="Inbox" to="/subscribe" icon="fa fa-envelope" />
                     <q-tab exact @click="drawer = !drawer" class="text-lowercase" label="More" icon="fas fa-ellipsis-v" />
@@ -11,7 +11,7 @@
             </div>
         </q-footer>
         <q-drawer v-model="drawer" :breakpoint="500" overlay bordered>
-            <q-scroll-area class="fit" style="height: calc(100% - 150px); margin-top: 150px;">
+            <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px;">
                 <q-list>
                     <template v-for="(menuItem, index) in menuList">
                   <q-item :key="index" :to="menuItem.to" clickable :active="menuItem.label === 'Outbox'" v-ripple>
@@ -46,12 +46,7 @@ const menuList = [{
         to: '/',
         separator: false
     },
-    {
-        icon: 'fas fa-podcast',
-        label: 'Tentang Kami',
-        to: '/about',
-        separator: true
-    },
+
     {
         icon: 'fas fa-bolt',
         label: 'News',
@@ -82,6 +77,18 @@ const menuList = [{
     //   to: '/kirim-naskah',    
     //   separator: false
     // },
+    {
+        icon: 'fas fa-podcast',
+        label: 'Tentang Kami',
+        to: '/about',
+        separator: false
+    },    
+    {
+        icon: 'fas fa-envelope',
+        label: 'Berlangganan',
+        to: '/subscribe',
+        separator: false
+    },     
     {
         icon: 'info',
         label: 'Ketentuan Layanan',
