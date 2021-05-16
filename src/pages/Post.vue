@@ -18,7 +18,7 @@
                 </q-item>
             </q-card>
         </div>
-        <div class="container" style="max-width:700px" v-if="naskahs">
+        <div class="container" style="max-width:700px" v-for="naskah in naskahs" :key="naskah.id">
             <q-img :src="`https://people.xabi.us${naskahs[0].Cover.url}`" style="width: 100%" />
             <div class="text-right q-pr-sm text-grey-8">{{ naskahs[0].Credit }}</div>
             <q-breadcrumbs gutter="sm" class="q-pt-lg q-pl-lg">
@@ -124,9 +124,27 @@ export default {
     data() {
         return {
             seamless: false,
-            title: 'People Reunite Post',
             confirm: false,
             tanggalPublikasi: '',
+            naskahs: [{
+                Judul: [],
+                id: [],
+                Subjudul: [],
+                slug: [],
+                Cover: [],
+                Kategori: [],
+                kontributors: [{
+                    Nama: ''
+                }],
+                Published: [],
+                Body: [],
+                Kanal: [],
+                KanalUrl: [],
+                Credit: [],
+                Player: [],
+                MetaDescription: [],
+                Keywords: [],                
+            }]
         }
     },
     apollo: {
