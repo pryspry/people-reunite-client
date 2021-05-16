@@ -1,10 +1,10 @@
 <template>
   <q-page padding>
-    <div class="q-pl-md">
+    <div class="q-px-md">
       <h1 class="text-h5">Ketentuan Layanan</h1>
 <p><strong>Pendahuluan</strong></p>
 <p>Dengan mengakses dan menggunakan fitur situs web ini berarti Anda telah menyetujui, menerima, dan mematuhi syarat-syarat penggunaan yang kami terapkan pada situs ini. Mohon baca halaman ini dengan seksama. Syarat-syarat penggunaan ini berlaku efektif mulai tanggal 16 Mei 2021.</p>
-<p>peoplereunite adalah peoplereunite adalah media sindikasi dan jejaring digital yang memuat info seputar musik, sastra dan seni budaya di Indonesia. Format konten yang disediakan antara lain naskah tulisan, foto dan grafis, video serta audio.</p>
+<p>peoplereunite adalah media sindikasi dan jejaring digital yang memuat info seputar musik, sastra dan seni budaya di Indonesia. Format konten yang disediakan antara lain naskah tulisan, foto dan grafis, video serta audio.</p>
 <p><strong>Tentang Layanan Situs</strong></p>
 <p>Situs peoplereunite dapat digunakan oleh khalayak umum dari berbagai profesi, kalangan masyarakat dan usia. Layanan yang kami berikan yakni sebagai media informasi publik yang dapat diakses secara cuma-cuma. Kami juga melayani tawaran kerjasama pemuatan informasi publik, pemuatan advertorial dan iklan.</p>
 <p>Tanpa memberitahukan terlebih dahulu, kami berhak menarik atau mengubah layanan yang kami sediakan di situs peoplereunite di masa mendatang. Kami tidak bertanggung jawab apabila layanan situs peoplereunite tidak tersedia pada saat kapanpun dan untuk berapa lama karena alasan tertentu, semisal kegagalan server, koneksi atau perubahan tautan url konten.</p>
