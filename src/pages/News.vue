@@ -22,7 +22,7 @@
                         <q-img :src="`https://people.xabi.us${naskah.Cover.url}`" :ratio="16/9" />
                         <q-card-section>
                             <div class="text-h6 ppl_home_title">{{ naskah.Judul }}</div>
-                            <div class="text-subtitle2 ppl_home_meta q-pt-sm">{{ naskah.Kategori.Judul }} by {{ naskah.kontributors[0].Nama }} on {{ naskah.Published }}</div>
+                            <div class="text-subtitle2 ppl_home_meta q-pt-sm">{{ naskah.Kategori.Judul }} by {{ naskah.kontributors[0].Nama }} on {{ naskah.Published | tanggalPublikasi }}</div>
                         </q-card-section>
                     </q-card>
                 </router-link>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-// import gql from 'graphql-tag'
+import { date } from 'quasar'
 import { newsNaskahsQuery } from 'src/graphql/queries.js'
 
 export default {
@@ -51,6 +51,11 @@ export default {
             query: newsNaskahsQuery
 
         }
-    }
+    },
+    filters: {
+        tanggalPublikasi: function(value) {
+            return date.formatDate(value, 'D MMM YYYY');
+        }
+    }    
 }
 </script>

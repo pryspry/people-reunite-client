@@ -3,10 +3,10 @@
     <q-footer reveal bordered class="bg-primary text-white">
         <div class="q-gutter-y-md">
             <q-tabs class="text-white">
-                <q-route-tab exact class="text-lowercase" to="/" icon="fas fa-book-reader" label="Index" />
-                <q-route-tab exact class="text-lowercase" to="/about" icon="fa fa-podcast" label="About" />
-                <q-route-tab exact class="text-lowercase" to="/trending" icon="fab fa-hotjar" label="Trending" />
-                <q-tab style="width:10px" class="text-lowercase" @click="drawer = !drawer" icon="fas fa-ellipsis-v" />
+                <q-route-tab exact class="text-lowercase" to="/" icon="fas fa-home" />
+                <q-route-tab exact class="text-lowercase" to="/about" icon="fa fa-podcast"/>
+                <q-route-tab exact class="text-lowercase" to="/subscribe" icon="fa fa-envelope" />
+                <q-tab @click="drawer = !drawer" icon="fas fa-ellipsis-v" />
             </q-tabs>
         </div>
     </q-footer>
@@ -47,11 +47,12 @@ const menuList = [
     to: '/',
     separator: false
   },
-  // {
-  //   icon: 'fas fa-moon',
-  //   label: 'Dark Mode',
-  //   separator: true
-  // },
+  {
+    icon: 'fas fa-podcast',
+    label: 'Tentang Kami',
+    to: '/about',    
+    separator: true
+  },
   {
     icon: 'fas fa-bolt',
     label: 'News',
