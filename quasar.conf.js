@@ -21,8 +21,7 @@ module.exports = function (/* ctx */) {
     boot: [
       'addressbar-color',
       'axios',
-      'vue-social-sharing',
-      'gtm',
+      'vue-social-sharing'
     ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
