@@ -47,7 +47,22 @@ import { essayNaskahsQuery } from 'src/graphql/queries.js'
 export default {
     name: 'PageIndex',
     meta: {
-        title: 'People Reunite Official Site'
+        title: 'People Reunite Official Site',
+            meta: {
+                description: { name: 'description', content: 'peoplereunite adalah media sindikasi dan jejaring digital yang memuat info seputar musik, sastra dan seni budaya di Indonesia' },
+                keywords: { name: 'keywords', content: 'people reunite, jurnalisme musik, musik independen' },
+                ogTitle: {property: 'og:title', content: 'People Reunite Official Site'},
+                ogDescription: {property: 'og:description', content: 'peoplereunite adalah media sindikasi dan jejaring digital yang memuat info seputar musik, sastra dan seni budaya di Indonesia'},
+                ogImage: {property: 'og:image', content: 'src/assets/icon-256x256.png'},                
+                ogUrl: {property: 'og:url', content: 'https://peoplereunite.us/'},
+                ogType: {property: 'og:type', content:"website"},
+                twitterCard: {property: 'twitter:card', content:"summary_large_image"},
+                twitterUrl: {property: 'twitter:url', content: 'https://peoplereunite.us/'},
+                twitterTitle: {property: 'twitter:title', content: 'People Reunite Official Site'},
+                twitterDescription: {property: 'twitter:description', content: 'peoplereunite adalah media sindikasi dan jejaring digital yang memuat info seputar musik, sastra dan seni budaya di Indonesia'},
+                twitterImage: {property: 'twitter:image', content: 'src/assets/icon-256x256.png'},
+            },        
+
     },
     data() {
         return {
