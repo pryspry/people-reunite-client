@@ -22,7 +22,10 @@ module.exports = function ( ctx ) {
       'addressbar-color',
       'axios',
       'vue-social-sharing',
-      ctx.mode.pwa ? 'gtm-plugin' : ''    
+      {
+        server: false,
+        path: 'gtm',
+      }
       ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
