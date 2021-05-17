@@ -6,7 +6,7 @@
 // Configuration for your app
 // https://v1.quasar.dev/quasar-cli/quasar-conf-js
 
-module.exports = function (/* ctx */) {
+module.exports = function ( ctx ) {
   return {
 
     // https://v1.quasar.dev/quasar-cli/supporting-ts
@@ -22,8 +22,8 @@ module.exports = function (/* ctx */) {
       'addressbar-color',
       'axios',
       'vue-social-sharing',
-      'gtm-plugin'
-    ],
+      ctx.mode.pwa ? 'gtm-plugin' : ''    
+      ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
     css: [
