@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <div class="container" style="max-width:700px" v-if="!naskahs">
+        <div class="container" style="max-width:700px" v-if="!naskahs[0].Judul">
             <q-card flat>
                 <q-skeleton height="300px" square />
                 <q-item>
@@ -18,6 +18,7 @@
                 </q-item>
             </q-card>
         </div>
+        <template v-if="naskahs[0].Judul">
         <div class="container" style="max-width:700px" v-for="naskah in naskahs" :key="naskah.id">
             <q-img :src="`https://people.xabi.us${naskahs[0].Cover.url}`" style="width: 100%" />
             <div class="text-right q-pr-sm text-grey-8">{{ naskahs[0].Credit }}</div>
@@ -76,10 +77,9 @@
                         <q-btn label="Lanjutkan Baca" color="primary" v-close-popup />
                     </q-card-actions>
                 </q-card>
-            </q-dialog>
-    
-    
+            </q-dialog>    
         </div>
+        </template>
     </q-page>
 </template>
 
@@ -127,18 +127,20 @@ export default {
             confirm: false,
             tanggalPublikasi: '',
             naskahs: [{
-                Judul: [],
-                id: [],
+                Judul: '',
+                id: '',
                 Subjudul: [],
                 slug: [],
-                Cover: [],
+                Cover: {
+                    url: ''
+                },
                 Kategori: [],
                 kontributors: [{
                     Nama: ''
                 }],
                 Published: [],
-                Body: [],
-                Kanal: [],
+                Body: '',
+                Kanal: '',
                 KanalUrl: [],
                 Credit: [],
                 Player: [],
