@@ -100,7 +100,13 @@ export default {
                 ogTitle: {property: 'og:title', content: this.metaTitle},
                 ogDescription: {property: 'og:description', content: this.metaDesc},
                 ogImage: {property: 'og:image', content: this.metaImage},                
-                ogUrl: {property: 'og:url', content: this.metaUrl}
+                ogUrl: {property: 'og:url', content: this.metaUrl},
+                ogType: {property: 'og:type', content:"website"},
+                twitterCard: {property: 'twitter:card', content:"summary_large_image"},
+                twitterUrl: {property: 'twitter:url', content: this.metaUrl},
+                twitterTitle: {property: 'twitter:title', content: this.metaTitle},
+                twitterDescription: {property: 'twitter:description', content: this.metaDesc},
+                twitterImage: {property: 'twitter:image', content: this.metaImage},
             },
         }
     },
