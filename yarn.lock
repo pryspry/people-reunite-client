@@ -8754,6 +8754,11 @@ vue-apollo@^3.0.3:
     serialize-javascript "^4.0.0"
     throttle-debounce "^2.1.0"
 
+vue-google-adsense@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/vue-google-adsense/-/vue-google-adsense-1.9.3.tgz#14811a716f6a676b4b43b988e84a88c271336c2a"
+  integrity sha512-BFJfnPFXmpu8pC+UtlHu4Ac9pXg/I3xh5FJ91FY9AaNQ4D+507UROZ4kk95V7UMGmugB/cZ9k2v/JQMPbvBndw==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -8774,6 +8779,11 @@ vue-router@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.2.0.tgz#da35195ffe37fdf0bec9f5f8f72781d2a7718815"
   integrity sha512-khkrcUIzMcI1rDcNtqkvLwfRFzB97GmJEsPAQdj7t/VvpGhmXLOkUfhc+Ah8CvpSXGXwuWuQO+x8Sy/xDhXZIA==
+
+vue-script2@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue-script2/-/vue-script2-2.1.0.tgz#8e480dc6052c8cdf2aa0ec112efc80f31ddc3522"
+  integrity sha512-EDUOjQBFvhkJXwmWuUR9ijlF7/4JtmvjXSKaHSa/LNTMy9ltjgKgYB68aqlxgq8ORdSxowd5eo24P1syjZJnBA==
 
 vue-server-renderer@2.6.12:
   version "2.6.12"

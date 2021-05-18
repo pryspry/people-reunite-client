@@ -25,6 +25,10 @@ module.exports = function ( ctx ) {
       {
         server: false,
         path: 'gtm',
+      },
+      {
+        server: false,
+        path: 'vue-google-adsense'
       }
       ],
 

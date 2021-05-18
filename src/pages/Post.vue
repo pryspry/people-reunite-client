@@ -54,6 +54,11 @@
                         </ShareNetwork>
                     </div>
                 </div>
+                <Adsense
+                    data-ad-client="ca-pub-3292103525202109"
+                    data-ad-slot="1234567890">
+                </Adsense>
+
             </div>
             <div class="ppl_post_player">
                 <q-dialog v-model="seamless" seamless position="top">

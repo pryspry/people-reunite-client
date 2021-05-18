@@ -24,6 +24,8 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "quasar": "^1.0.0",
+    "vue-google-adsense": "^1.9.3",
+    "vue-script2": "^2.1.0",
     "vue-social-sharing": "^3.0.7"
   },
   "devDependencies": {
