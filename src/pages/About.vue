@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="q-px-md">
+    <div class="q-px-md" style="max-width:1200px;margin:0 auto 0">
       <h1 class="text-h5">About</h1>
       <p>peoplereunite adalah media sindikasi dan jejaring digital yang memuat info seputar musik, sastra dan seni budaya di Indonesia.</p>
       <p>Digagas pertama kali pada 2017 sebagai hashtag campaign di sosial media, peoplereunite berkembang menjadi wadah berkarya sejumlah penulis, musisi dan pelaku seni di masa pandemi 2019 - 2020.</p>  

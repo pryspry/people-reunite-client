@@ -1,6 +1,6 @@
 <template>
     <q-page padding>
-        <div class="q-px-md">
+        <div class="q-px-md" style="max-width:1200px;margin:0 auto 0">
             <h1 class="text-h5">Inbox</h1>
             <p>Berlangganan konten terbaru peoplereunite dikirim langsung ke inbox email kamu</p>
             <!-- Begin Mailchimp Signup Form -->

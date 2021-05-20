@@ -7,7 +7,22 @@
                         <h1 class="text-h6">
                             <q-icon name="fas fa-podcast" /><span class="q-pl-sm">peoplereunite</span></h1>
                     </q-btn>
-                    <q-toggle class="ppl_darkmode" style="width: 60px" v-model="dark" @input="changeDarkMode" color="grey"></q-toggle>
+    
+                    <div class="desktop-only float-right q-pt-md">
+                        <q-tabs indicator-color="transparent" dense inline-label class="text-grey" active-color="white">
+                            <q-route-tab exact class="text-uppercase" label="Home" to="/" />
+                            <q-route-tab exact class="text-uppercase" label="News" to="/news" />
+                            <q-route-tab exact class="text-uppercase" label="Review" to="/review" />
+                            <q-route-tab exact class="text-uppercase" label="Essay" to="/essay" />
+                            <q-route-tab exact class="text-uppercase" label="About" to="/about" />
+                            <q-route-tab exact class="text-uppercase" label="Subscribe" to="/subscribe" />
+                        <q-toggle class="desktop-only ppl_darkmode" style="width: 60px" v-model="dark" @input="changeDarkMode" color="grey"></q-toggle>
+
+                        </q-tabs>
+    
+                    </div>
+    
+                    <q-toggle class="mobile-only ppl_darkmode" style="width: 60px" v-model="dark" @input="changeDarkMode" color="grey"></q-toggle>
     
                 </q-toolbar-title>
             </q-toolbar>

@@ -16,7 +16,9 @@ const routes = [
       { path: 'ketentuan-layanan', component: () => import('pages/KetentuanLayanan.vue') },
       { path: 'lisensi', component: () => import('pages/Lisensi.vue') },
       { path: 'kategori', component: () => import('pages/Kategori.vue') },
-      { path: 'subscribe', component: () => import('src/pages/Subscribe.vue') },            
+      { path: 'subscribe', component: () => import('src/pages/Subscribe.vue') },
+      { path: 'search', component: () => import('src/pages/Search.vue') },            
+      
     ]
   },
 

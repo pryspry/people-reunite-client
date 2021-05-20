@@ -1,9 +1,9 @@
 <template>
     <div>
-        <q-footer reveal bordered class="bg-primary text-white">
+        <q-footer reveal bordered class="bg-primary text-white mobile-only ">
             <div class="q-gutter-y-md">
                 <q-tabs class="text-white">
-                    <q-route-tab exact class="text-lowercase" label="Home" to="/" icon="fab fa-houzz" />
+                    <q-route-tab exact class="text-capitalize" label="Home" to="/" icon="fab fa-houzz" />
                     <q-route-tab exact class="text-lowercase" label="About" to="/about" icon="fa fa-podcast" />
                     <q-route-tab exact class="text-lowercase" label="Inbox" to="/subscribe" icon="fa fa-envelope" />
                     <q-tab exact @click="drawer = !drawer" class="text-lowercase" label="More" icon="fas fa-ellipsis-v" />
