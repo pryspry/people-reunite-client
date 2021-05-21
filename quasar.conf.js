@@ -1,3 +1,23 @@
+const SitemapPlugin = require('sitemap-webpack-plugin').default
+const paths = [
+  { path: '/' },
+  { path: '/pricing' },
+  { path: 'about' },
+  { path: 'submit' },
+  { path: '/post/:slug' },
+  { path: 'news' },
+  { path: 'review' },
+  { path: 'essay' },
+  { path: 'kontributor' },
+  { path: 'kirim-naskah' },
+  { path: 'ketentuan-layanan' },
+  { path: 'lisensi' },
+  { path: 'kategori' },
+  { path: 'subscribe' },
+  { path: 'search' }, 
+
+]
+
 /*
  * This file runs in a Node context (it's NOT transpiled by Babel), so use only
  * the ES6 features that are supported by your Node version. https://node.green/
@@ -75,6 +95,15 @@ module.exports = function ( ctx ) {
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
       // chainWebpack (/* chain */) {
       //   //
+      // },
+      // extendWebpack(cfg) {
+      //   cfg.plugins.push(
+      // new SitemapPlugin('http://peoplereunite.us', paths, {
+      //   filename: 'sitemap.xml',
+      //   lastmod: true,
+      //   changefreq: 'weekly',
+      //   priority: '0.8'
+      // }))
       // },
       chainWebpack (chain, { isServer, isClient }) {
           chain.module.rule('vue')
