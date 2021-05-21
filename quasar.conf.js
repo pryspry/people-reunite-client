@@ -1,7 +1,6 @@
 const SitemapPlugin = require('sitemap-webpack-plugin').default
 const paths = [
 { path: '/' },
-{ path: '/pricing' },
 { path: 'about' },
 { path: 'submit' },
 { path: '/post/:slug' },
