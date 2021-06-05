@@ -85,16 +85,22 @@
             </q-dialog>    
         </div>
         </template>
+        <LatestPost />
     </q-page>
 </template>
 
 <script>
+import LatestPost from 'components/LatestPost';
+
 import gql from 'graphql-tag'
 import { date } from 'quasar'
 
 
 export default {
     name: 'PostPage',
+    components: {
+        LatestPost
+    },
 
     meta() {
         return {
