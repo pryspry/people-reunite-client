@@ -25,7 +25,7 @@
                     <q-card flat style="height: 350px" class="q-my-md">
                         <q-img
                         v-if="`https://people.xabi.us${naskah.Cover.url}` !== null"
-                            placeholder-src="https://via.placeholder.com/480x300.png/fff/ccc/?text=PeopleReunite"
+                            placeholder-src="https://via.placeholder.com/480x300.png/333/ccc/?text=%23peoplereunite"
                             :src="`https://people.xabi.us${naskah.Cover.url}`" :ratio="16/9" />
 
                         <q-card-section>
