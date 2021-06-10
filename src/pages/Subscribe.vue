@@ -47,7 +47,7 @@ export default {
                 ogImage: {property: 'og:image', content: 'https://people.xabi.us/uploads/Logo_0f8b82b57e.png'},                
                 ogUrl: {property: 'og:url', content: 'https://peoplereunite.us/'},
                 ogType: {property: 'og:type', content:"website"},
-                ogAppId: {property: 'fb:app_id', content="1238781586591702"},                
+                ogAppId: {property: 'fb:app_id', content: '1238781586591702'},                
                 twitterCard: {property: 'twitter:card', content:"summary_large_image"},
                 twitterUrl: {property: 'twitter:url', content: 'https://peoplereunite.us/'},
                 twitterTitle: {property: 'twitter:title', content: 'People Reunite Official Site'},
