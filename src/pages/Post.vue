@@ -54,10 +54,10 @@
                         </ShareNetwork>
                     </div>
                 </div>
-                <Adsense
+                <!-- <Adsense
                     data-ad-client="ca-pub-3292103525202109"
                     data-ad-slot="1234567890">
-                </Adsense>
+                </Adsense> -->
 
             </div>
             <div class="ppl_post_player">
@@ -114,6 +114,7 @@ export default {
                 ogImage: {property: 'og:image', content: this.metaImage},                
                 ogUrl: {property: 'og:url', content: this.metaUrl},
                 ogType: {property: 'og:type', content:"website"},
+                ogAppId: {property: 'fb:app_id', content="1238781586591702"},                
                 twitterCard: {property: 'twitter:card', content:"summary_large_image"},
                 twitterUrl: {property: 'twitter:url', content: this.metaUrl},
                 twitterTitle: {property: 'twitter:title', content: this.metaTitle},
