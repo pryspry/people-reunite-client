@@ -160,8 +160,10 @@ return {
       'AddressbarColor',
       'Meta',
       'LocalStorage',
-      'SessionStorage'        
-    ]
+      'SessionStorage',
+
+    ],
+
   },
 
   // animations: 'all', // --- includes all animations
