@@ -84,8 +84,9 @@
                 </q-card>
             </q-dialog>    
         </div>
+                <LatestPost />
+
         </template>
-        <LatestPost />
     </q-page>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
     <q-page class="q-pa-md">
         <h1 class="ppl_kategorititle text-h5">
-            <q-icon name="fas fa-file-medical-alt"/> Review
+            <q-icon name="fas fa-fire"/> Review
         </h1>
 
         <div class="row container ppl_home">
