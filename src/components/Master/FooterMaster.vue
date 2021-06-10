@@ -31,8 +31,8 @@
               <q-avatar size="56px" class="q-mb-sm">
                 <q-icon name="fa fa-podcast" />
               </q-avatar>
-              <div class="text-weight-bold">People Reunite</div>
-              <div>#peoplereunite</div>
+              <div class="text-weight-bold">#peoplereunite</div>
+              <div>Your Daily Music News Feed</div>
             </div>
           </q-img>        
         </q-drawer>
