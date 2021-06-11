@@ -3,8 +3,8 @@
         <div class="row container ppl_home">
             <template v-if="$apollo.queries.naskahs.loading">
                 <div class="col-12 col-md-4">
-                    <q-card flat style="height: 350px" class="q-my-md">
-                        <q-skeleton height="300px" square />
+                    <q-card flat style="height: 250px" class="q-my-md">
+                        <q-skeleton height="200px" square />
                         <q-item>
                             <q-item-section>
                                 <q-item-label>
@@ -18,8 +18,8 @@
                     </q-card>
                 </div>
                 <div class="col-12 col-md-4">
-                    <q-card flat style="height: 350px" class="q-my-md">
-                        <q-skeleton height="300px" square />
+                    <q-card flat style="height: 250px" class="q-my-md">
+                        <q-skeleton height="200px" square />
                         <q-item>
                             <q-item-section>
                                 <q-item-label>
@@ -33,8 +33,8 @@
                     </q-card>
                 </div>
                 <div class="col-12 col-md-4">
-                    <q-card flat style="height: 350px" class="q-my-md">
-                        <q-skeleton height="300px" square />
+                    <q-card flat style="height: 250px" class="q-my-md">
+                        <q-skeleton height="200px" square />
                         <q-item>
                             <q-item-section>
                                 <q-item-label>
@@ -48,8 +48,8 @@
                     </q-card>
                 </div>
                 <div class="col-12 col-md-4">
-                    <q-card flat style="height: 350px" class="q-my-md">
-                        <q-skeleton height="300px" square />
+                    <q-card flat style="height: 250px" class="q-my-md">
+                        <q-skeleton height="200px" square />
                         <q-item>
                             <q-item-section>
                                 <q-item-label>
@@ -63,8 +63,8 @@
                     </q-card>
                 </div>
                 <div class="col-12 col-md-4">
-                    <q-card flat style="height: 350px" class="q-my-md">
-                        <q-skeleton height="300px" square />
+                    <q-card flat style="height: 250px" class="q-my-md">
+                        <q-skeleton height="200px" square />
                         <q-item>
                             <q-item-section>
                                 <q-item-label>
@@ -78,8 +78,8 @@
                     </q-card>
                 </div>
                 <div class="col-12 col-md-4">
-                    <q-card flat style="height: 350px" class="q-my-md">
-                        <q-skeleton height="300px" square />
+                    <q-card flat style="height: 250px" class="q-my-md">
+                        <q-skeleton height="200px" square />
                         <q-item>
                             <q-item-section>
                                 <q-item-label>
@@ -92,7 +92,7 @@
                         </q-item>
                     </q-card>
                 </div>
-            </template>            
+            </template>          
             <div class="col-12 col-md-4" v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">
                     <q-card flat style="height: 350px" class="q-my-md">
