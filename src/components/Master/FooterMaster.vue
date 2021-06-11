@@ -60,6 +60,12 @@ const menuList = [{
         separator: false
     },
     {
+        icon: 'fas fa-feather-alt',
+        label: 'Feature Story',
+        to: '/story',
+        separator: false
+    },
+    {
         icon: 'fas fa-coffee',
         label: 'Essay',
         to: '/essay',

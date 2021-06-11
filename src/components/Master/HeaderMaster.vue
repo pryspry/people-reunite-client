@@ -13,9 +13,10 @@
                             <q-route-tab exact class="text-uppercase" label="Home" to="/" />
                             <q-route-tab exact class="text-uppercase" label="News" to="/news" />
                             <q-route-tab exact class="text-uppercase" label="Review" to="/review" />
+                            <q-route-tab exact class="text-uppercase" label="Story" to="/story" />                            
                             <q-route-tab exact class="text-uppercase" label="Essay" to="/essay" />
                             <q-route-tab exact class="text-uppercase" label="About" to="/about" />
-                            <q-route-tab exact class="text-uppercase" label="Subscribe" to="/subscribe" />
+                            <!-- <q-route-tab exact class="text-uppercase" label="Subscribe" to="/subscribe" /> -->
                         <q-toggle class="desktop-only ppl_darkmode" style="width: 60px" v-model="dark" @input="changeDarkMode" color="grey"></q-toggle>
 
                         </q-tabs>

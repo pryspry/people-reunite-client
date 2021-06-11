@@ -11,6 +11,7 @@ const routes = [
       { path: 'news', component: () => import('pages/News.vue') },
       { path: 'review', component: () => import('pages/Review.vue') },
       { path: 'essay', component: () => import('pages/Essay.vue') },
+      { path: 'story', component: () => import('src/pages/Story.vue') },      
       { path: 'kontributor', component: () => import('pages/Kontributor.vue') },
       { path: 'kirim-naskah', component: () => import('pages/KirimNaskah.vue') },
       { path: 'ketentuan-layanan', component: () => import('pages/KetentuanLayanan.vue') },

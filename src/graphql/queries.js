@@ -124,6 +124,39 @@ query reviewNaskahsQuery {
   }  
 }`
 
+
+export const featureNaskahsQuery = gql`
+query featureNaskahsQuery {
+  naskahs(sort: "Published:desc",where: {
+    Kategori: {
+      Judul: "Feature Story"
+    }
+  }) {
+    id
+		Judul
+    Subjudul
+    slug
+    Cover {
+    	url
+      caption
+      alternativeText
+    }
+    Body
+    MetaDescription
+    Keywords
+    Kanal
+    KanalUrl
+    Kategori {
+    	Judul 
+      }
+		kontributors {
+    	Nama
+		}
+    Player
+    Published    
+  }  
+}`
+
 export const latestNaskahsQuery = gql`
     query latestNaskahsQuery {
         naskahs(limit: 6, sort: "Published:desc") {

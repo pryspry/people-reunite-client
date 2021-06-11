@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <div class="container" style="max-width:700px" v-if="!naskahs[0].Judul">
+        <div class="container" style="max-width:700px" v-if="$apollo.queries.naskahs.loading">
             <q-card flat>
                 <q-skeleton height="300px" square />
                 <q-item>
