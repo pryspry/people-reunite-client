@@ -33,7 +33,7 @@
                     <q-btn flat class="text-lowercase" stack @click="seamless = true">
                         <q-icon name="fa fa-play text-red" />Play </q-btn>
                 </div>
-                <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br>on {{ naskahs[0].Published | tanggalPublikasi }}
+                <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br><small>{{ naskahs[0].Published | tanggalPublikasi }}</small>
                     <div v-if="naskahs[0].Kanal" style="font-size: 18px;" class="q-pt-sm">
                         <q-icon style="font-size:10px" name="fas fa-external-link-alt" /> via
                         <q-btn flat style="font-size: 16px;top:-1px" class="text-capitalize ppl_kanal" :label="naskahs[0].Kanal" color="black" @click="confirm = true" />
@@ -64,8 +64,8 @@
                 <q-dialog v-model="seamless" seamless position="top">
                     <q-card style="width: 550px;" class="bg-transparent" flat>
                         <q-card-section class="q-pa-none">
-                            <q-linear-progress dark indeterminate color="red" />
-                            <q-markdown>{{ naskahs[0].Player}}</q-markdown>
+                            <q-linear-progress dark indeterminate color="dark" />
+                            <q-markdown class="bg-dark">{{ naskahs[0].Player}}</q-markdown>
                             <q-btn class="bg-black text-white ppl_post_player_close" icon="close" v-close-popup/>
                         </q-card-section>
                     </q-card>
