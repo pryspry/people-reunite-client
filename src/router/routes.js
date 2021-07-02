@@ -19,7 +19,7 @@ const routes = [
       { path: 'kategori', component: () => import('pages/Kategori.vue') },
       { path: 'subscribe', component: () => import('src/pages/Subscribe.vue') },
       { path: 'search', component: () => import('src/pages/Search.vue') },            
-      
+      { path: 'home', component: () => import('src/pages/Home2.vue') },                  
     ]
   },
 

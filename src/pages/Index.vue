@@ -1,98 +1,105 @@
 <template>
-    <q-page class="q-pa-md">
-        <div class="row container ppl_home">
-            <template v-if="$apollo.queries.naskahs.loading">
-                <div class="col-12 col-md-4">
-                    <q-card flat style="height: 250px" class="q-my-md">
-                        <q-skeleton height="200px" square />
-                        <q-item>
-                            <q-item-section>
-                                <q-item-label>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                                <q-item-label caption>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                            </q-item-section>
-                        </q-item>
-                    </q-card>
-                </div>
-                <div class="col-12 col-md-4">
-                    <q-card flat style="height: 250px" class="q-my-md">
-                        <q-skeleton height="200px" square />
-                        <q-item>
-                            <q-item-section>
-                                <q-item-label>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                                <q-item-label caption>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                            </q-item-section>
-                        </q-item>
-                    </q-card>
-                </div>
-                <div class="col-12 col-md-4">
-                    <q-card flat style="height: 250px" class="q-my-md">
-                        <q-skeleton height="200px" square />
-                        <q-item>
-                            <q-item-section>
-                                <q-item-label>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                                <q-item-label caption>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                            </q-item-section>
-                        </q-item>
-                    </q-card>
-                </div>
-                <div class="col-12 col-md-4">
-                    <q-card flat style="height: 250px" class="q-my-md">
-                        <q-skeleton height="200px" square />
-                        <q-item>
-                            <q-item-section>
-                                <q-item-label>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                                <q-item-label caption>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                            </q-item-section>
-                        </q-item>
-                    </q-card>
-                </div>
-                <div class="col-12 col-md-4">
-                    <q-card flat style="height: 250px" class="q-my-md">
-                        <q-skeleton height="200px" square />
-                        <q-item>
-                            <q-item-section>
-                                <q-item-label>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                                <q-item-label caption>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                            </q-item-section>
-                        </q-item>
-                    </q-card>
-                </div>
-                <div class="col-12 col-md-4">
-                    <q-card flat style="height: 250px" class="q-my-md">
-                        <q-skeleton height="200px" square />
-                        <q-item>
-                            <q-item-section>
-                                <q-item-label>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                                <q-item-label caption>
-                                    <q-skeleton type="text" />
-                                </q-item-label>
-                            </q-item-section>
-                        </q-item>
-                    </q-card>
-                </div>
-            </template>          
+    <div>
+        <HeadlinePost v-if="$q.platform.is.mobile"/>
+        <SubheadlinePost v-if="$q.platform.is.mobile"/>
+        <LatestNews v-if="$q.platform.is.mobile"/>
+        <LatestReviews v-if="$q.platform.is.mobile"/>
+        <LatestStory v-if="$q.platform.is.mobile"/>
+        <LatestEssay v-if="$q.platform.is.mobile"/>
+        <q-page class="q-pa-md" v-if="$q.platform.is.desktop">
+            <div class="row container ppl_home">
+                <template v-if="$apollo.queries.naskahs.loading">
+                    <div class="col-12 col-md-4">
+                        <q-card flat style="height: 250px" class="q-my-md">
+                            <q-skeleton height="200px" square />
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                    <q-item-label caption>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                </q-item-section>
+                            </q-item>
+                        </q-card>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <q-card flat style="height: 250px" class="q-my-md">
+                            <q-skeleton height="200px" square />
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                    <q-item-label caption>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                </q-item-section>
+                            </q-item>
+                        </q-card>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <q-card flat style="height: 250px" class="q-my-md">
+                            <q-skeleton height="200px" square />
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                    <q-item-label caption>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                </q-item-section>
+                            </q-item>
+                        </q-card>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <q-card flat style="height: 250px" class="q-my-md">
+                            <q-skeleton height="200px" square />
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                    <q-item-label caption>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                </q-item-section>
+                            </q-item>
+                        </q-card>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <q-card flat style="height: 250px" class="q-my-md">
+                            <q-skeleton height="200px" square />
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                    <q-item-label caption>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                </q-item-section>
+                            </q-item>
+                        </q-card>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <q-card flat style="height: 250px" class="q-my-md">
+                            <q-skeleton height="200px" square />
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                    <q-item-label caption>
+                                        <q-skeleton type="text" />
+                                    </q-item-label>
+                                </q-item-section>
+                            </q-item>
+                        </q-card>
+                    </div>
+                </template>
             <div class="col-12 col-md-4" v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">
                     <q-card flat style="height: 350px" class="q-my-md">
@@ -109,38 +116,53 @@
             </div>
         </div>
     </q-page>
+</div>
 </template>
 
 <script>
 import { date } from 'quasar'
 
 import { allNaskahsQuery } from 'src/graphql/queries.js'
+import HeadlinePost from 'components/HeadlinePost'
+import SubheadlinePost from 'components/SubheadlinePost'
+import LatestNews from 'components/LatestNews'
+import LatestReviews from 'components/LatestReviews'
+import LatestStory from 'components/LatestStory'
+import LatestEssay from 'components/LatestEssay'
 
 export default {
+    components: {
+        HeadlinePost,
+        SubheadlinePost,
+        LatestNews,
+        LatestReviews,
+        LatestStory,
+        LatestEssay
+    },
     name: 'PageIndex',
     meta: {
         title: 'People Reunite - Your Daily Music News Feed',
-            meta: {
-                description: { name: 'description', content: 'peoplereunite adalah media berita musik, review album dan profil band indie jakarta bogor depok tangerang bekasi dan sekitarnya' },
-                keywords: { name: 'keywords', content: 'people reunite, jurnalisme musik, musik indie' },
-                ogTitle: {property: 'og:title', content: 'People Reunite - Your Daily Music News Feed'},
-                ogDescription: {property: 'og:description', content: 'peoplereunite adalah media berita musik, review album dan profil band indie jakarta bogor depok tangerang bekasi dan sekitarnya'},
-                ogImage: {property: 'og:image', content: 'https://people.xabi.us/uploads/Logo_0f8b82b57e.png'},                
-                ogUrl: {property: 'og:url', content: 'https://peoplereunite.us/'},
-                ogType: {property: 'og:type', content:"website"},
-                ogAppId: {property: 'fb:app_id', content: '1238781586591702'},
-                twitterCard: {property: 'twitter:card', content:"summary_large_image"},
-                twitterUrl: {property: 'twitter:url', content: 'https://peoplereunite.us/'},
-                twitterTitle: {property: 'twitter:title', content: 'People Reunite - Your Daily Music News Feed'},
-                twitterDescription: {property: 'twitter:description', content: 'peoplereunite adalah media berita musik, review album dan profil band indie jakarta bogor depok tangerang bekasi dan sekitarnya'},
-                twitterImage: {property: 'twitter:image', content: 'https://people.xabi.us/uploads/Logo_0f8b82b57e.png'},
-            },        
+        meta: {
+            description: { name: 'description', content: 'peoplereunite adalah media berita musik, review album dan profil band indie jakarta bogor depok tangerang bekasi dan sekitarnya' },
+            keywords: { name: 'keywords', content: 'people reunite, jurnalisme musik, musik indie' },
+            ogTitle: { property: 'og:title', content: 'People Reunite - Your Daily Music News Feed' },
+            ogDescription: { property: 'og:description', content: 'peoplereunite adalah media berita musik, review album dan profil band indie jakarta bogor depok tangerang bekasi dan sekitarnya' },
+            ogImage: { property: 'og:image', content: 'https://people.xabi.us/uploads/Logo_0f8b82b57e.png' },
+            ogUrl: { property: 'og:url', content: 'https://peoplereunite.us/' },
+            ogType: { property: 'og:type', content: "website" },
+            ogAppId: { property: 'fb:app_id', content: '1238781586591702' },
+            twitterCard: { property: 'twitter:card', content: "summary_large_image" },
+            twitterUrl: { property: 'twitter:url', content: 'https://peoplereunite.us/' },
+            twitterTitle: { property: 'twitter:title', content: 'People Reunite - Your Daily Music News Feed' },
+            twitterDescription: { property: 'twitter:description', content: 'peoplereunite adalah media berita musik, review album dan profil band indie jakarta bogor depok tangerang bekasi dan sekitarnya' },
+            twitterImage: { property: 'twitter:image', content: 'https://people.xabi.us/uploads/Logo_0f8b82b57e.png' },
+        },
     },
     data() {
         return {
             naskahs: [],
         }
-    }, 
+    },
     apollo: {
         naskahs: {
             prefetch: true,
@@ -152,6 +174,6 @@ export default {
         tanggalPublikasi: function(value) {
             return date.formatDate(value, 'D MMM YYYY');
         }
-    }    
+    }
 }
 </script>

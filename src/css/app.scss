@@ -142,3 +142,43 @@ a.ppl_home_router:hover {
 .body--dark .ppl_share i {
   color: #fff !important;
 }
+
+.ppl_readmore {
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.ppl_hometext {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.ppl_wrapper_hori {
+  display: flex;
+  justify-content: center;
+}
+.ppl_hori {
+  background: #efefef;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% - 4rem);
+  min-height: 50vh;
+}
+.body--dark .ppl_hori,
+.body--dark .ppl_wrapper_story {
+    background: black;
+}
+.ppl_wrapper_story {
+    background: #efefef;
+}
+.ppl_borderbottom {
+  border-bottom: 2px solid #444;
+}
+
+.ppl_homecard_title {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+}
