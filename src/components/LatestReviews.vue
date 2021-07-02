@@ -2,7 +2,7 @@
     <q-page class="q-px-md q-pb-md" v-if="!$apollo.queries.naskahs.loading">
         <div class="row container ppl_home">
             <div class="col-12 ppl_borderbottom q-mb-md">
-                <p class="text-h6 text-uppercase"><q-icon name="fas fa-fire" /> Latest Review</p>
+                <p class="text-h6 text-bold text-uppercase"><q-icon name="fas fa-fire" /> Latest Review</p>
             </div>
             <div class="col-12 q-py-md" v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">

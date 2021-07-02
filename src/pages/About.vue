@@ -14,7 +14,8 @@
       </ul>
       <p>Kirimkan naskah via WhatsApp di 08881536856 atau email ke info@peoplereunite.us. Untuk saat ini kami tidak menyediakan honorarium bagi naskah yang dimuat.</p>
       <h1 class="text-h5">Kontak Kami</h1>
-      <p>Untuk keperluan korespondensi, donasi, kerjasama dan lain-lain, sila hubungi kami via WhatsApp di 08881536856 atau email di info@peoplereunite.us</p>
+      <p>Untuk keperluan korespondensi, donasi, kerjasama dan lain-lain, sila hubungi kami via WhatsApp di 08881536856 atau klik button di bawah ini.</p>
+          <q-btn color="green" icon="fab fa-whatsapp" class="full-width" label="Chat via WhatsApp" type="a" href="https://wa.me/628881536856"/>
       <h1 class="text-h5">Alamat Surat</h1>
       <p>Jl Kalibata Utara II No 14B, Mampang Prapatan, Kota Jakarta Selatan, DKI Jakarta, 12470</p>
       </div>

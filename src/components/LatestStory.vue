@@ -1,7 +1,7 @@
 <template>
     <div class="ppl_wrapper_story q-pt-lg" v-if="!$apollo.queries.naskahs.loading">
         <div class="col-12 text-center">
-            <p class="text-h4"><q-icon name="fas fa-feather-alt"/>  Feature Story</p>
+            <p class="text-h5 text-bold"><q-icon name="fas fa-feather-alt"/>  Feature Story</p>
         </div>
         <div class="ppl_wrapper_hori">
             <div class="ppl_hori q-pl-lg">
