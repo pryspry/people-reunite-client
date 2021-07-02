@@ -1,5 +1,5 @@
 <template>
-    <q-page>
+    <q-page >
         <div class="container" style="max-width:700px" v-if="$apollo.queries.naskahs.loading">
             <q-card flat>
                 <q-skeleton height="300px" square />
@@ -18,7 +18,7 @@
                 </q-item>
             </q-card>
         </div>
-        <template v-if="naskahs[0].Judul">
+        <template v-if="naskahs[0].Judul && !$apollo.queries.naskahs.loading">
         <div class="container" style="max-width:700px" v-for="naskah in naskahs" :key="naskah.id">
             <q-img :src="`https://people.xabi.us${naskahs[0].Cover.url}`" style="width: 100%" />
             <div class="text-right q-pr-sm text-grey-8">{{ naskahs[0].Credit }}</div>

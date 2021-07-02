@@ -217,7 +217,7 @@ export const headlineNaskahsQuery = gql`
 
 export const subheadlineNaskahsQuery = gql`
     query subheadlineNaskahsQuery {
-        naskahs(limit: 10, start: 2, sort: "Published:desc") {
+        naskahs(limit: 10, start: 1, sort: "Published:desc") {
             id
             Judul
             Subjudul
