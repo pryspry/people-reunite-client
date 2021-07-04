@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="!$apollo.queries.naskahs.loading">
+        <div v-if="!$apollo.queries.naskahs.loading" class="q-pt-xl">
             <div v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">
                 <div class="row">
