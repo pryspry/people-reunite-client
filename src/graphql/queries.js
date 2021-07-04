@@ -214,6 +214,63 @@ export const headlineNaskahsQuery = gql`
         }  
     }
 `
+export const desktopheadlineNaskahsQuery = gql`
+    query headlineNaskahsQuery {
+        naskahs(limit: 1, sort: "Published:desc") {
+            id
+            Judul
+            Subjudul
+            slug
+            Cover {
+                url
+            caption
+            alternativeText
+            }
+            Body
+            MetaDescription
+            Keywords
+            Kanal
+            KanalUrl
+            Kategori {
+                Judul 
+            }
+                kontributors {
+                Nama
+                }
+            Player
+            Published    
+        }  
+    }
+`
+
+export const desktopsubheadlineNaskahsQuery = gql`
+    query desktopsubheadlineNaskahsQuery {
+        naskahs(start: 2, sort: "Published:desc") {
+            id
+            Judul
+            Subjudul
+            slug
+            Cover {
+                url
+            caption
+            alternativeText
+            }
+            Body
+            MetaDescription
+            Keywords
+            Kanal
+            KanalUrl
+            Kategori {
+                Judul 
+            }
+                kontributors {
+                Nama
+                }
+            Player
+            Published    
+        }  
+    }
+`
 
 export const subheadlineNaskahsQuery = gql`
     query subheadlineNaskahsQuery {

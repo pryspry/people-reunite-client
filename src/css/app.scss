@@ -72,10 +72,18 @@ a.ppl_home_router:hover {
   line-height: 28px;
 }
 
+.ppl_home_title_desktop {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+
 @media (min-width: $breakpoint-md-min) {
   .ppl_home > div {
     padding: 30px;
   }
+
 }
 
 /* Post */

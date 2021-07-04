@@ -6,6 +6,17 @@
         <LatestReviews v-if="$q.platform.is.mobile"/>
         <LatestStory v-if="$q.platform.is.mobile"/>
         <LatestEssay v-if="$q.platform.is.mobile"/>
+        <div class="q-pa-md ppl_abovethefold" v-if="$q.platform.is.desktop">
+            <div class="row container">
+                <div class="col-md-12">
+                    <HeadlinepostDesktop />
+                    <SubheadlinepostDesktop />                    
+                </div>
+                <div class="col-md-12"></div>                
+            </div>
+        </div>
+
+
         <q-page class="q-pa-md" v-if="$q.platform.is.desktop">
             <div class="row container ppl_home">
                 <template v-if="$apollo.queries.naskahs.loading">
@@ -122,13 +133,14 @@
 <script>
 import { date } from 'quasar'
 
-import { allNaskahsQuery } from 'src/graphql/queries.js'
+import { desktopsubheadlineNaskahsQuery } from 'src/graphql/queries.js'
 import HeadlinePost from 'components/HeadlinePost'
 import SubheadlinePost from 'components/SubheadlinePost'
 import LatestNews from 'components/LatestNews'
 import LatestReviews from 'components/LatestReviews'
 import LatestStory from 'components/LatestStory'
 import LatestEssay from 'components/LatestEssay'
+import HeadlinepostDesktop from 'components/HeadlinepostDesktop'
 
 export default {
     components: {
@@ -137,7 +149,8 @@ export default {
         LatestNews,
         LatestReviews,
         LatestStory,
-        LatestEssay
+        LatestEssay,
+        HeadlinepostDesktop        
     },
     name: 'PageIndex',
     meta: {
@@ -166,7 +179,7 @@ export default {
     apollo: {
         naskahs: {
             prefetch: true,
-            query: allNaskahsQuery
+            query: desktopsubheadlineNaskahsQuery
 
         }
     },

@@ -1,6 +1,9 @@
 <template>
     <div>
-        <q-footer reveal bordered class="bg-primary text-white mobile-only ">
+        <q-footer reveal v-if="$q.platform.is.desktop" class="q-pa-md">
+            <div class="text-center">Some Rights Reserved <i class="fab fa-creative-commons"></i> People Reunite 2017 - 2021</div>
+        </q-footer>
+        <q-footer reveal bordered class="bg-primary text-white" v-if="$q.platform.is.mobile">
             <div class="q-gutter-y-md">
                 <q-tabs class="text-white">
                     <q-route-tab exact class="text-lowercase" label="Home" to="/" icon="fab fa-houzz" />
