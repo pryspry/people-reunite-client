@@ -6,7 +6,7 @@
             </div>
             <div class="col-12 col-md-4" v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">
-                    <q-card flat style="height: 350px" class="q-my-md transparent">
+                    <q-card flat style="min-height: 350px" class="q-my-md transparent">
                         <q-img
                         v-if="`https://people.xabi.us${naskah.Cover.url}` !== null"
                             placeholder-src="https://via.placeholder.com/480x300.png/333/ccc/?text=%23peoplereunite"
