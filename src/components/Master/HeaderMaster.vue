@@ -23,7 +23,7 @@
     
                     </div>
     
-                    <q-toggle class="mobile-only ppl_darkmode" style="width: 60px" v-model="dark" @input="changeDarkMode" color="grey"></q-toggle>
+                    <q-toggle unchecked-icon="fa fa-times" checked-icon="fa fa-moon" class="mobile-only ppl_darkmode" style="width: 60px" v-model="dark" @input="changeDarkMode" color="dark"></q-toggle>
     
                 </q-toolbar-title>
             </q-toolbar>
