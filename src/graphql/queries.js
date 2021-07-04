@@ -159,7 +159,7 @@ query featureNaskahsQuery {
 
 export const latestNaskahsQuery = gql`
     query latestNaskahsQuery {
-        naskahs(limit: 6, sort: "Published:desc") {
+        naskahs(limit: 9, sort: "Published:desc") {
             id
             Judul
             Subjudul

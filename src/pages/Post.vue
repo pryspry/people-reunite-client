@@ -30,7 +30,7 @@
                 <h5 class="q-mb-none text-italic text-uppercase q-mt-lg">{{ naskahs[0].Subjudul }}</h5>
                 <h1 class="text-h5 q-mt-none text-bold ppl_post_title">{{ naskahs[0].Judul }}</h1>
                 <div v-if="naskahs[0].Player" class="ppl_post_attachment q-pb-lg text-right float-right">
-                    <q-btn flat class="text-lowercase" stack @click="seamless = !seamless">
+                    <q-btn flat class="text-lowercase" stack @click="playMusic">
                         <template v-if="!seamless">
                             <q-icon name="fa fa-play text-red"/>Play 
                         </template>
@@ -49,8 +49,8 @@
                     <q-markdown>{{ naskahs[0].Body }}</q-markdown>
 
                 <div v-if="naskahs[0].Player" class="ppl_post_attachment q-pb-lg">
-                    <q-btn v-if="!seamless" color="primary" icon="fa fa-play" label="Play music" class="full-width text-lowercase"  @click="seamless = !seamless"/>
-                    <q-btn v-if="seamless" color="primary" icon="fa fa-window-close" label="Close music" class="full-width text-lowercase"  @click="seamless = !seamless"/>
+                    <q-btn v-if="!seamless" color="primary" icon="fa fa-play" label="Play music" class="full-width text-lowercase"  @click="playMusic"/>
+                    <q-btn v-if="seamless" color="primary" icon="fa fa-window-close" label="Close music" class="full-width text-lowercase"  @click="playMusic"/>
                 </div>
 
 
@@ -71,10 +71,9 @@
                     data-ad-client="ca-pub-3292103525202109"
                     data-ad-slot="1234567890">
                 </Adsense> -->
-
             </div>
             <div class="ppl_post_player">
-                <q-dialog v-model="seamless" seamless position="top">
+                <q-dialog v-model="seamless" seamless no-refocus position="top">
                     <q-card style="width: 550px;" class="bg-transparent" flat>
                         <q-card-section class="q-pa-none">
                             <q-linear-progress dark indeterminate color="dark" />
@@ -97,8 +96,9 @@
                 </q-card>
             </q-dialog>    
         </div>
+        <div v-if="!seamless">
                 <LatestPost />
-
+        </div>
         </template>
     </q-page>
 </template>
@@ -153,9 +153,14 @@ export default {
             return `https://people.xabi.us`+this.naskahs[0].Cover.url
         }                        
     },
+    methods: {
+        playMusic() {
+            this.seamless = !this.seamless;
+        },
+    },
     data() {
         return {
-            seamless: false,
+            seamless: null,
             confirm: false,
             tanggalPublikasi: '',
             naskahs: [{

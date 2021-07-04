@@ -2,7 +2,7 @@
     <q-page class="q-pa-md">
         <div class="row container ppl_home">
             <div class="col-12 text-center">
-                <p class="text-h4">Latest Post</p>
+                <p class="text-h4">Baca Juga<br><i class="fas fa-angle-double-down"></i></p>
             </div>
             <div class="col-12 col-md-4" v-for="naskah in naskahs" :key="naskah.id">
                 <router-link :to="`/post/` + naskah.slug" class="ppl_home_router">

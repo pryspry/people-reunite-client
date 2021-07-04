@@ -10,9 +10,7 @@
             <div class="row container">
                 <div class="col-md-12">
                     <HeadlinepostDesktop />
-                    <SubheadlinepostDesktop />                    
                 </div>
-                <div class="col-md-12"></div>                
             </div>
         </div>
 
