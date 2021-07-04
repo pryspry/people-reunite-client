@@ -31,7 +31,13 @@
                 <h1 class="text-h5 q-mt-none text-bold ppl_post_title">{{ naskahs[0].Judul }}</h1>
                 <div v-if="naskahs[0].Player" class="ppl_post_attachment q-pb-lg text-right float-right">
                     <q-btn flat class="text-lowercase" stack @click="seamless = !seamless">
-                        <q-icon name="fa fa-play text-red" />Play </q-btn>
+                        <template v-if="!seamless">
+                            <q-icon name="fa fa-play text-red"/>Play 
+                        </template>
+                        <template v-if="seamless">
+                            <q-icon name="fas fa-window-close text-red"/>Close 
+                        </template>
+                        </q-btn>
                 </div>
                 <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br><small>{{ naskahs[0].Published | tanggalPublikasi }}</small>
                     <div v-if="naskahs[0].Kanal" style="font-size: 18px;" class="q-pt-sm">
@@ -41,6 +47,13 @@
                 </div>
                 <div class="ppl_post_body q-mb-xl q-pb-md">
                     <q-markdown>{{ naskahs[0].Body }}</q-markdown>
+
+                <div v-if="naskahs[0].Player" class="ppl_post_attachment q-pb-lg">
+                    <q-btn v-if="!seamless" color="primary" icon="fa fa-play" label="Play music" class="full-width text-lowercase"  @click="seamless = !seamless"/>
+                    <q-btn v-if="seamless" color="primary" icon="fa fa-window-close" label="Close music" class="full-width text-lowercase"  @click="seamless = !seamless"/>
+                </div>
+
+
                     <div class="ppl_share flex flex-center q-pt-lg">
                         <div class="float-left q-pr-sm">Share on</div>
                         <ShareNetwork network="twitter" :url="`https://peoplereunite.us/post/` + naskahs[0].slug" :title="naskahs[0].Judul" hashtags="peoplereunite">
