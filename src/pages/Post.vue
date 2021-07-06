@@ -20,8 +20,8 @@
         </div>
         <template v-if="naskahs[0].Judul && !$apollo.queries.naskahs.loading">
         <div class="container" style="max-width:700px" v-for="naskah in naskahs" :key="naskah.id">
-            <q-img :src="`https://people.xabi.us${naskahs[0].Cover.url}`" style="width: 100%" />
-            <div class="text-right q-pr-sm text-grey-8">{{ naskahs[0].Credit }}</div>
+            <q-img v-if="$q.platform.is.mobile" :src="`https://people.xabi.us${naskahs[0].Cover.url}`" style="width: 100%" />
+            <div v-if="$q.platform.is.mobile" class="text-right q-pr-sm text-grey-8">{{ naskahs[0].Credit }}</div>
             <q-breadcrumbs gutter="sm" class="q-pt-lg q-pl-lg">
                 <q-breadcrumbs-el label="Home" to="/" />
                 <q-breadcrumbs-el :label="naskahs[0].Kategori.Judul" />
@@ -39,12 +39,15 @@
                         </template>
                         </q-btn>
                 </div>
+
                 <div class="text-subtitle2 q-pb-lg ppl_post_meta">{{ naskahs[0].Kategori.Judul }} by {{ naskahs[0].kontributors[0].Nama }}<br><small>{{ naskahs[0].Published | tanggalPublikasi }}</small>
                     <div v-if="naskahs[0].Kanal" style="font-size: 18px;" class="q-pt-sm">
                         <q-icon style="font-size:10px" name="fas fa-external-link-alt" /> via
                         <q-btn flat style="font-size: 16px;top:-1px" class="text-capitalize ppl_kanal" :label="naskahs[0].Kanal" color="black" @click="confirm = true" />
                     </div>
                 </div>
+            <q-img v-if="$q.platform.is.desktop" :src="`https://people.xabi.us${naskahs[0].Cover.url}`" style="width: 100%" />
+            <div v-if="$q.platform.is.desktop" class="text-right q-pr-sm q-mb-lg text-grey-8">{{ naskahs[0].Credit }}</div>
                 <div class="ppl_post_body q-mb-xl q-pb-md">
                     <q-markdown>{{ naskahs[0].Body }}</q-markdown>
 
@@ -73,7 +76,7 @@
                 </Adsense> -->
             </div>
             <div class="ppl_post_player">
-                <q-dialog v-model="seamless" seamless no-refocus position="top">
+                <q-dialog v-if="$q.platform.is.mobile" v-model="seamless" seamless no-refocus position="top">
                     <q-card style="width: 550px;" class="bg-transparent" flat>
                         <q-card-section class="q-pa-none">
                             <q-linear-progress dark indeterminate color="dark" />
@@ -82,8 +85,16 @@
                         </q-card-section>
                     </q-card>
                 </q-dialog>
+                <q-dialog v-if="$q.platform.is.desktop" v-model="seamless" seamless no-refocus position="right">
+                    <q-card style="width: 550px;" class="bg-transparent" flat>
+                        <q-card-section class="q-pa-none">
+                            <!-- <q-linear-progress dark indeterminate color="dark" /> -->
+                            <q-markdown class="bg-dark">{{ naskahs[0].Player}}</q-markdown>
+                            <q-btn class="bg-black text-white ppl_post_player_close" icon="close" v-close-popup/>
+                        </q-card-section>
+                    </q-card>
+                </q-dialog>
             </div>
-    
             <q-dialog v-model="confirm">
                 <q-card>
                     <q-card-section class="row items-center q-pt-lg q-px-lg">
@@ -156,7 +167,7 @@ export default {
     methods: {
         playMusic() {
             this.seamless = !this.seamless;
-        },
+        },       
     },
     data() {
         return {
@@ -183,7 +194,7 @@ export default {
                 Player: [],
                 MetaDescription: [],
                 Keywords: [],                
-            }]
+            }],
         }
     },
     apollo: {

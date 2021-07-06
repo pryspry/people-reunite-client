@@ -12,11 +12,11 @@
 
                     </div>
                     <div class="col-md-6 q-pl-lg">
-                            <div class="text-subtitle2 ppl_home_meta q-pt-sm">{{ naskah.Kategori.Judul }} Update</div>
-                            <div class="text-h6 ppl_home_title_desktop q-py-sm">{{ naskah.Judul }}</div>
+                            <q-badge class="text-subtitle2 ppl_home_meta q-px-sm" color="primary" :label="naskah.Kategori.Judul" />
+                            <!-- <div class="text-subtitle2 ppl_home_meta q-pt-sm">{{ naskah.Kategori.Judul }} Update</div> -->
+                            <div class="text-h6 ppl_home_title_desktop q-py-sm q-pt-lg">{{ naskah.Judul }}</div>
                             <div class="text-subtitle2 q-pt-sm">by {{ naskah.kontributors[0].Nama }} | {{ naskah.Published | tanggalPublikasi }}</div>
-                            <div class="text-h6 q-pt-md ellipsis-2-lines">{{ naskah.MetaDescription }} <span class="ppl_readmore">Selengkapnya...</span></div>
-
+                            <div class="text-h6 q-pt-md ellipsis-3-lines">{{ naskah.MetaDescription }}</div>
                     </div>
                 </div>
                 </router-link>
