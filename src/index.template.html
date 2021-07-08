@@ -22,22 +22,15 @@
     <!-- End Google Tag Manager -->
 
     <!-- Start One Signal -->
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-    <script>
-    var OneSignal = window.OneSignal || [];
-    OneSignal.push(function () {
-      OneSignal.init({
-        appId: "d70f9907-e1bc-4652-8e05-c525bc81ccc0",
-        autoResubscribe: true,
-        notifyButton: {
-          enable: true,
-        },
-         // Depends if you're testing or not
-        allowLocalhostAsSecureOrigin: true
-      });
-      OneSignal.showNativePrompt();
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "d70f9907-e1bc-4652-8e05-c525bc81ccc0",
     });
-    </script>
+  });
+</script>
     <!-- End One Signal -->
 
   </head>
