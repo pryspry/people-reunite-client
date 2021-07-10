@@ -15,6 +15,14 @@
 <p>Situs peoplereunite juga menyimpan informasi pribadi Anda seperti alamat email, profil dan password rahasia pada saat Anda mendaftar sebagai member. Anda diwajibkan untuk memelihara/menjaga kerahasiaan akun dan password Anda. Jangan menggunakan password yang mudah ditebak oleh orang lain seperti tanggal lahir Anda, serta jangan lupa untuk me-log out akun Anda apabila Anda menggunakan komputer milik umum. peoplereunite akan menyimpan dan mengelola data pribadi Anda dengan baik dan tidak digunakan untuk kepentingan lain atau diperjual belikan.</p>
 <p><strong>Tentang Hak Jawab</strong></p>
 <p>Pengelola situs peoplereunite menerima laporan, keluhan atau tanggapan publik terkait dengan seluruh konten yang ada di situs peoplereunite. Publik berhak mendapatkan hak jawab bila ada konten yang dirasa merugikan individu atau pihak tertentu dengan pemuatan surat jawab secara terbuka di situs peoplereunite.</p>
+<p><strong>Kontribusi</strong></p>
+<p>peoplereunite menerima sumbangan tulisan dari kontributor seputar tema musik, sastra dan seni budaya dalam format naskah berita, review, esai, puisi dan cerita pendek untuk dikurasi dan dimuat di situs ini dengan mengirimkan:</p>
+<ul>
+  <li>Naskah diketik rapi dalam format doc</li>
+  <li>Foto pendukung bila ada</li>
+  <li>Nama Lengkap dan bio singkat</li>                        
+  </ul>
+<p>Kirimkan naskah via WhatsApp di +6281290525383 atau email ke peoplereuniteid@gmail.com. Untuk saat ini kami tidak menyediakan honorarium bagi tulisan yang dimuat.</p>
 <p><strong>Tautan url Dari Situs Web Kami</strong></p>
 <p>Pada konten situs peoplereunite terdapat beberapa tautan url yang menuju situs lain (eksternal) dan dari sumber daya lain yang disediakan oleh pihak ketiga. Kami tidak bertanggung jawab atas perubahan tautan atau kerugian yang dapat timbul apabila Anda menggunakannya. Hal ini dikarenakan kami tidak mengontrol isi dari situs tersebut dan berada di luar tanggung jawab kami.</p>
 <p><strong>Perubahan-Perubahan</strong><br /><br />Karena syarat-syarat penggunaan ini mengikat Anda, kami harapkan agar Anda sering memeriksa halaman ini karena halaman ini bisa berubah sewaktu-waktu tanpa pemberitahuan sebelumnya. Kami memiliki kebijakan untuk merevisi syarat-syarat penggunaan ini pada saat kapanpun. Sebagian dari ketentuan yang terdapat dalam syarat-syarat penggunaan ini juga dapat digantikan oleh ketentuan-ketentuan atau pemberitahuan yang dipublikasi di bagian lain situs ini.</p>      </div>
