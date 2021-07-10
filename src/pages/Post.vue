@@ -237,6 +237,22 @@ export default {
         tanggalPublikasi: function(value) {
             return date.formatDate(value, 'D MMM YYYY');
         }
+    },
+    // beforeMount() {
+    //     console.log('before mount')
+
+    // },
+    // mounted() {
+    //     console.log('mounted')
+    // },
+    beforeUpdate() {
+//        console.log('before update')
+       this.$q.loadingBar.start()        
+
+    },
+    updated() {
+       this.$q.loadingBar.stop()
+//        console.log('updated')
     }
 }
 </script>

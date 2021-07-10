@@ -44,6 +44,14 @@ export default {
             },        
 
     },
+    beforeMount() {
+       this.$q.loadingBar.start()        
+
+    },
+    mounted() {
+       this.$q.loadingBar.stop()
+
+    },    
 
 }
 </script>

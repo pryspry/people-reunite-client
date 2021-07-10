@@ -9,6 +9,10 @@
 module.exports = function ( ctx ) {
 return {
 
+        bin: {
+        linuxAndroidStudio: "/snap/android-studio/current/android-studio/bin/studio.sh"
+  },
+  
   // https://v1.quasar.dev/quasar-cli/supporting-ts
   supportTS: false,
 
@@ -130,8 +134,17 @@ return {
       'Meta',
       'LocalStorage',
       'SessionStorage',
-
+      'LoadingBar',
     ],
+
+    config: {
+      loadingBar: {
+        color: 'red',
+  size: '2px',
+  position: 'top'
+        /* look at QuasarConfOptions from the API card */
+      }
+    }    
 
   },
 

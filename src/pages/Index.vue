@@ -185,6 +185,14 @@ export default {
         tanggalPublikasi: function(value) {
             return date.formatDate(value, 'D MMM YYYY');
         }
-    }
+    },
+    beforeMount() {
+       this.$q.loadingBar.start()        
+
+    },
+    mounted() {
+       this.$q.loadingBar.stop()
+
+    },
 }
 </script>
