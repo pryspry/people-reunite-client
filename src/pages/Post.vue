@@ -30,9 +30,9 @@
                     <h5 class="q-mb-none text-italic text-uppercase q-mt-lg">{{ naskahs[0].Subjudul }}</h5>
                     <h1 class="text-h5 q-mt-none text-bold ppl_post_title">{{ naskahs[0].Judul }}</h1>
                     <div v-if="naskahs[0].Player" class="ppl_post_attachment q-pb-lg text-right float-right">
-                        <q-btn flat class="text-lowercase" stack @click="playMusic">
+                        <q-btn flat class="text-lowercase" stack @click="playMusic" id="ppl_playtop">
                             <template v-if="!seamless">
-                                <q-icon name="fa fa-play text-red" id="ppl_playtop"/>Play
+                                <q-icon name="fa fa-play text-red"/>Play
                             </template>
                             <template v-if="seamless">
                                 <q-icon name="fas fa-window-close text-red" />
