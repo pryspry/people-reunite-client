@@ -12,7 +12,7 @@
         <li>Foto pendukung bila ada</li>
         <li>Nama Lengkap dan bio singkat</li>                        
       </ul>
-      <p>Kirimkan naskah via WhatsApp di +6281290525383 atau email ke peoplereuniteid@gmail.com. Untuk saat ini kami tidak menyediakan honorarium bagi tulisan yang dimuat.</p>
+      <p>Kirimkan naskah via WhatsApp di +6281290525383 atau email ke peoplereunite.us@gmail.com. Untuk saat ini kami tidak menyediakan honorarium bagi tulisan yang dimuat.</p>
       <h1 class="text-h5">Kontak Kami</h1>
       <p>Untuk keperluan korespondensi, donasi, kerjasama dan lain-lain, sila hubungi kami via WhatsApp di +6281290525383 atau klik button di bawah ini.</p>
           <q-btn color="green" icon="fab fa-whatsapp" class="full-width" label="Chat via WhatsApp" type="a" href="https://wa.me/6281290525383"/>

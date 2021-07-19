@@ -22,7 +22,7 @@
   <li>Foto pendukung bila ada</li>
   <li>Nama Lengkap dan bio singkat</li>                        
   </ul>
-<p>Kirimkan naskah via WhatsApp di +6281290525383 atau email ke peoplereuniteid@gmail.com. Untuk saat ini kami tidak menyediakan honorarium bagi tulisan yang dimuat.</p>
+<p>Kirimkan naskah via WhatsApp di +6281290525383 atau email ke peoplereunite.us@gmail.com. Untuk saat ini kami tidak menyediakan honorarium bagi tulisan yang dimuat.</p>
 <p><strong>Tautan url Dari Situs Web Kami</strong></p>
 <p>Pada konten situs peoplereunite terdapat beberapa tautan url yang menuju situs lain (eksternal) dan dari sumber daya lain yang disediakan oleh pihak ketiga. Kami tidak bertanggung jawab atas perubahan tautan atau kerugian yang dapat timbul apabila Anda menggunakannya. Hal ini dikarenakan kami tidak mengontrol isi dari situs tersebut dan berada di luar tanggung jawab kami.</p>
 <p><strong>Perubahan-Perubahan</strong><br /><br />Karena syarat-syarat penggunaan ini mengikat Anda, kami harapkan agar Anda sering memeriksa halaman ini karena halaman ini bisa berubah sewaktu-waktu tanpa pemberitahuan sebelumnya. Kami memiliki kebijakan untuk merevisi syarat-syarat penggunaan ini pada saat kapanpun. Sebagian dari ketentuan yang terdapat dalam syarat-syarat penggunaan ini juga dapat digantikan oleh ketentuan-ketentuan atau pemberitahuan yang dipublikasi di bagian lain situs ini.</p>      </div>
